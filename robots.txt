@@ -34,5 +34,5 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://ldnmq.ltd/sitemap.xml
-Sitemap: https://ldnmq.ltd/sitemap.txt
+Sitemap: https://ldmnq.ltd/sitemap.xml
+Sitemap: https://ldmnq.ltd/sitemap.txt

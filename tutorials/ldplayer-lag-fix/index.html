@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>雷电模拟器卡顿优化｜掉帧发热解决方法</title>
 <meta name="description" content="模拟器卡顿、掉帧、风扇狂转？从开启 VT、合理分配 CPU 与内存、调整分辨率帧率，到切换渲染模式、更新显卡驱动，这份清单帮你逐项排查并提速。">
-<link rel="canonical" href="https://ldnmq.ltd/tutorials/ldplayer-lag-fix/">
+<link rel="canonical" href="https://ldmnq.ltd/tutorials/ldplayer-lag-fix/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#2563eb">
 <meta name="author" content="雷电模拟器导航站">
@@ -15,15 +15,15 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="雷电模拟器卡顿优化｜掉帧发热解决方法">
 <meta property="og:description" content="模拟器卡顿、掉帧、风扇狂转？从开启 VT、合理分配 CPU 与内存、调整分辨率帧率，到切换渲染模式、更新显卡驱动，这份清单帮你逐项排查并提速。">
-<meta property="og:url" content="https://ldnmq.ltd/tutorials/ldplayer-lag-fix/">
-<meta property="og:image" content="https://ldnmq.ltd/assets/hero.webp">
+<meta property="og:url" content="https://ldmnq.ltd/tutorials/ldplayer-lag-fix/">
+<meta property="og:image" content="https://ldmnq.ltd/assets/hero.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="雷电模拟器卡顿优化教程">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="雷电模拟器卡顿优化｜掉帧发热解决方法">
 <meta name="twitter:description" content="模拟器卡顿、掉帧、风扇狂转？从开启 VT、合理分配 CPU 与内存、调整分辨率帧率，到切换渲染模式、更新显卡驱动，这份清单帮你逐项排查并提速。">
-<meta name="twitter:image" content="https://ldnmq.ltd/assets/hero.webp">
+<meta name="twitter:image" content="https://ldmnq.ltd/assets/hero.webp">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -31,10 +31,10 @@
 <link rel="stylesheet" href="/assets/styles.css">
 <script src="/assets/app.js" defer></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldnmq.ltd/"},{"@type":"ListItem","position":2,"name":"卡顿优化","item":"https://ldnmq.ltd/tutorials/ldplayer-lag-fix/"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldmnq.ltd/"},{"@type":"ListItem","position":2,"name":"卡顿优化","item":"https://ldmnq.ltd/tutorials/ldplayer-lag-fix/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldnmq.ltd/tutorials/ldplayer-lag-fix/","downloadUrl":"https://ldnmq.ltd/ldplayer-download/","screenshot":"https://ldnmq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/tutorials/ldplayer-lag-fix/","downloadUrl":"https://ldmnq.ltd/ldplayer-download/","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"雷电模拟器卡顿最常见的原因是什么？","acceptedAnswer":{"@type":"Answer","text":"最常见原因是 CPU 虚拟化（VT/SVM）未开启，导致模拟器无法使用硬件加速。其次是 CPU 核心与内存分配不合理、分辨率过高、显卡驱动过旧、后台程序占用过多资源，以及使用机械硬盘导致加载慢。"}},{"@type":"Question","name":"低配电脑能让雷电模拟器流畅运行吗？","acceptedAnswer":{"@type":"Answer","text":"可以通过优化让低配电脑获得更流畅的体验：开启 VT 是最关键的一步，其次降低分辨率至 720p、将帧率限制在 30fps、切换到 OpenGL 渲染模式，并关闭后台不必要的程序，这些措施组合使用效果明显。"}},{"@type":"Question","name":"如何设置 CPU 核心与内存分配才合理？","acceptedAnswer":{"@type":"Answer","text":"一般建议将分配给模拟器的 CPU 核心数设为实际物理核心数的一半（4 核电脑分配 2 核），内存设为 2～4GB，不超过系统总内存的 50%。分配过多反而会导致 Windows 系统本身资源紧张。"}},{"@type":"Question","name":"OpenGL 和 DirectX 渲染模式有什么区别？应该选哪个？","acceptedAnswer":{"@type":"Answer","text":"OpenGL 兼容性更广，适合大多数显卡；DirectX 在部分 Nvidia 显卡上性能更好。建议先尝试 DirectX，如果出现花屏或崩溃则切换回 OpenGL。目前大多数用户默认使用 OpenGL 即可获得稳定表现。"}},{"@type":"Question","name":"雷电模拟器发热严重怎么办？","acceptedAnswer":{"@type":"Answer","text":"发热通常是 CPU/GPU 满载所致。可降低帧率上限（如从 60fps 降至 30fps）、调低游戏画质、开启模拟器的帧率限制功能，同时确保电脑散热通风良好，清洁散热风扇积尘。笔记本建议放在散热垫上使用。"}},{"@type":"Question","name":"杀毒软件会导致雷电模拟器卡顿吗？","acceptedAnswer":{"@type":"Answer","text":"会。杀毒软件的实时扫描功能有时会对模拟器的磁盘读写操作进行检查，产生明显延迟。可以将雷电模拟器的安装目录添加到杀毒软件的排除/信任列表，或在游戏时暂停实时防护（使用完后记得重新开启）。"}}]}
@@ -43,7 +43,7 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"雷电模拟器卡顿优化（提升流畅度的实用方法）","description":"从开启 VT 到调整 CPU/内存、渲染模式、显卡驱动等多方面系统解决 LDPlayer 卡顿问题。","step":[{"@type":"HowToStep","name":"开启 VT 虚拟化（最优先）","text":"进入 BIOS 开启 Intel VT-x 或 AMD SVM，这是提升模拟器性能效果最显著的步骤，其他优化建立在此基础上。"},{"@type":"HowToStep","name":"合理分配 CPU 核心与内存","text":"在雷电模拟器设置中，将 CPU 核心数设为物理核心数的一半，内存设为 2～4GB，不超过系统总内存的 50%。"},{"@type":"HowToStep","name":"调整分辨率与 DPI","text":"将模拟器分辨率设为 720p（1280×720），DPI 调整为 240，降低渲染负荷，配置较低的电脑效果尤为明显。"},{"@type":"HowToStep","name":"开启高帧率模式","text":"在雷电模拟器设置的「性能」页面，将帧率上限设置为与显示器刷新率匹配（60Hz 对应 60fps），并开启「高帧率」选项。"},{"@type":"HowToStep","name":"切换渲染模式","text":"在「引擎设置」中切换 OpenGL 或 DirectX 渲染模式，Nvidia 显卡推荐先试 DirectX，其余情况默认 OpenGL，选择画面更稳定的一项。"},{"@type":"HowToStep","name":"更新显卡驱动","text":"前往 Nvidia 或 AMD 官网下载最新版显卡驱动，旧驱动可能导致渲染错误、花屏或性能下降。"},{"@type":"HowToStep","name":"关闭后台占用程序","text":"运行模拟器前关闭浏览器、下载工具、录屏软件等占用 CPU 和内存较多的程序，释放更多资源给模拟器。"},{"@type":"HowToStep","name":"将模拟器安装在 SSD","text":"将雷电模拟器安装到 SSD 固态硬盘，可显著缩短启动时间与游戏资源加载速度，减少因磁盘 I/O 慢导致的卡顿。"},{"@type":"HowToStep","name":"将安装目录加入杀毒软件白名单","text":"在杀毒软件设置中将雷电模拟器安装目录添加到排除/信任列表，防止实时扫描干扰模拟器的磁盘读写。"},{"@type":"HowToStep","name":"适当降低游戏内画质","text":"进入游戏设置，将画质调为「流畅」或「均衡」模式，关闭阴影、抗锯齿等高负荷特效，以帧率稳定换取视觉品质。"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TechArticle","headline":"雷电模拟器卡顿优化（提升流畅度的实用方法）","inLanguage":"zh-CN","datePublished":"2026-05-23","dateModified":"2026-05-23","author":{"@type":"Organization","name":"雷电模拟器导航站 内容团队","url":"https://ldnmq.ltd/about/"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站","logo":{"@type":"ImageObject","url":"https://ldnmq.ltd/assets/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ldnmq.ltd/tutorials/ldplayer-lag-fix/"},"image":"https://ldnmq.ltd/assets/hero.webp"}
+{"@context":"https://schema.org","@type":"TechArticle","headline":"雷电模拟器卡顿优化（提升流畅度的实用方法）","inLanguage":"zh-CN","datePublished":"2026-05-23","dateModified":"2026-05-23","author":{"@type":"Organization","name":"雷电模拟器导航站 内容团队","url":"https://ldmnq.ltd/about/"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站","logo":{"@type":"ImageObject","url":"https://ldmnq.ltd/assets/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ldmnq.ltd/tutorials/ldplayer-lag-fix/"},"image":"https://ldmnq.ltd/assets/hero.webp"}
 </script>
 </head>
 <body>
