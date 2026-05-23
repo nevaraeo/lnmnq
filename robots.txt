@@ -25,3 +25,4 @@ User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://ldnmq.ltd/sitemap.xml
+Sitemap: https://ldnmq.ltd/sitemap.txt
