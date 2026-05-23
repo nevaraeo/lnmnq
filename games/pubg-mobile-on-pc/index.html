@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PUBG Mobile 电脑版｜雷电模拟器高帧畅玩</title>
+<meta name="description" content="把 PUBG Mobile 搬上电脑，视野更清晰、瞄准更精准。本页介绍在雷电模拟器中安装与设置和平精英 / 绝地求生手游的方法，并附高帧画质建议。">
+<link rel="canonical" href="https://ldnmq.ltd/games/pubg-mobile-on-pc/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#2563eb">
+<meta name="author" content="雷电模拟器导航站">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:site_name" content="雷电模拟器 LDPlayer">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PUBG Mobile 电脑版｜雷电模拟器高帧畅玩">
+<meta property="og:description" content="把 PUBG Mobile 搬上电脑，视野更清晰、瞄准更精准。本页介绍在雷电模拟器中安装与设置和平精英 / 绝地求生手游的方法，并附高帧画质建议。">
+<meta property="og:url" content="https://ldnmq.ltd/games/pubg-mobile-on-pc/">
+<meta property="og:image" content="https://ldnmq.ltd/assets/hero.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="用雷电模拟器在电脑上玩 PUBG Mobile">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PUBG Mobile 电脑版｜雷电模拟器高帧畅玩">
+<meta name="twitter:description" content="把 PUBG Mobile 搬上电脑，视野更清晰、瞄准更精准。本页介绍在雷电模拟器中安装与设置和平精英 / 绝地求生手游的方法，并附高帧画质建议。">
+<meta name="twitter:image" content="https://ldnmq.ltd/assets/hero.webp">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/app.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldnmq.ltd/"},{"@type":"ListItem","position":2,"name":"PUBG Mobile 电脑版","item":"https://ldnmq.ltd/games/pubg-mobile-on-pc/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldnmq.ltd/games/pubg-mobile-on-pc/","downloadUrl":"https://ldnmq.ltd/ldplayer-download/","screenshot":"https://ldnmq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"用雷电模拟器玩 PUBG Mobile 会被检测封号吗？","acceptedAnswer":{"@type":"Answer","text":"PUBG Mobile 对模拟器玩家有专属匹配机制（模拟器与模拟器玩家对战），雷电模拟器本身不含任何作弊辅助功能，正常游玩不会因使用模拟器而封号。避免使用任何第三方外挂程序是最重要的规则。"}},{"@type":"Question","name":"PUBG Mobile 在雷电模拟器上能开多少帧？","acceptedAnswer":{"@type":"Answer","text":"雷电模拟器支持将 PUBG Mobile 的帧率上限提升到 90fps 甚至更高。游戏内需将帧率设置为「极限」，并在模拟器性能设置中开启高帧率模式，配合开启 VT 虚拟化效果最佳。"}},{"@type":"Question","name":"PUBG Mobile 模拟器版和手机版是同一个服务器吗？","acceptedAnswer":{"@type":"Answer","text":"是的，账号数据互通，但匹配时模拟器玩家通常会与其他模拟器玩家优先匹配，以保证对局公平性。"}},{"@type":"Question","name":"玩 PUBG Mobile 推荐什么电脑配置？","acceptedAnswer":{"@type":"Answer","text":"PUBG Mobile 画面较精细，推荐 4 核以上 CPU、8GB 内存、独立显卡（或性能较强的核显），并开启 VT 虚拟化。最低 4 核 + 4GB 也能运行，但画质需调低。"}},{"@type":"Question","name":"压枪时鼠标灵敏度怎么调？","acceptedAnswer":{"@type":"Answer","text":"建议在雷电模拟器的键位编辑器中，将鼠标移动灵敏度调至 50~70 区间，再进入 PUBG Mobile 游戏内的灵敏度设置，将腰射和开镜灵敏度分别调低 20~30%，通过靶场实弹练习找到适合自己的参数。"}},{"@type":"Question","name":"怎么减少 PUBG Mobile 在模拟器中的卡顿？","acceptedAnswer":{"@type":"Answer","text":"首要措施是开启 CPU 虚拟化（VT），其次更新显卡驱动，将模拟器分配内存提升到 6~8GB，并关闭后台无关程序。若仍卡顿，可将游戏画质从「HDR」降至「高清」或「均衡」，帧率立即会改善。"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"用雷电模拟器在电脑上玩 PUBG Mobile","inLanguage":"zh-CN","datePublished":"2026-05-23","dateModified":"2026-05-23","author":{"@type":"Organization","name":"雷电模拟器导航站 内容团队","url":"https://ldnmq.ltd/about/"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站","logo":{"@type":"ImageObject","url":"https://ldnmq.ltd/assets/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ldnmq.ltd/games/pubg-mobile-on-pc/"},"image":"https://ldnmq.ltd/assets/hero.webp"}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="/" aria-label="雷电模拟器 LDPlayer 首页">
+      <img src="/assets/logo.webp" alt="雷电模拟器 LDPlayer 标志" width="34" height="34" decoding="async">
+      <b>雷电模拟器<span>·LDPlayer</span></b>
+    </a>
+    <span class="nav-spacer"></span>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="/ldplayer-download/">下载</a></li>
+      <li><a href="/ldplayer-for-pc/">电脑版</a></li>
+      <li><a href="/ldplayer-9/">版本</a></li>
+      <li><a href="/tutorials/how-to-install-ldplayer/">教程</a></li>
+      <li><a href="/games/free-fire-on-pc/" aria-current="page">游戏</a></li>
+      <li><a href="/compare/ldplayer-vs-bluestacks/">对比</a></li>
+      <li><a href="/faq/is-ldplayer-free/">FAQ</a></li>
+    </ul>
+    <button class="icon-btn nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="打开菜单">☰</button>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="面包屑">
+      <ol>
+        <li><a href="/">首页</a></li>
+        <li>PUBG Mobile 电脑版</li>
+      </ol>
+    </nav>
+    <h1>用雷电模拟器在电脑上玩 PUBG Mobile</h1>
+    <p class="lede">PUBG Mobile 是全球最具竞技深度的移动端大逃杀之一，写实画风与丰富的武器系统让每一局都充满策略。通过雷电模拟器（LDPlayer）在电脑上运行 PUBG Mobile，键鼠精准瞄准让压枪变得轻松，高帧率画面让敌人位移一览无余，配合大屏视野彻底释放你的战场潜力。</p>
+    <p class="byline">作者：<a href="/about/">雷电模拟器导航站 内容团队</a> · 技术审核：编辑部 · 最后更新：<time datetime="2026-05-23">2026 年 5 月 23 日</time> · <a href="/editorial-policy/">编辑与审核方针</a></p>
+
+    <div class="layout">
+      <article class="article">
+
+        <section aria-labelledby="why-pc">
+          <h2 id="why-pc">为什么要在电脑上玩 PUBG Mobile？</h2>
+          <p>PUBG Mobile 以写实的物理弹道、多样的地形和精细的画面著称，这些特性在小屏手机上很难完全发挥。将游戏移植到电脑端，带来的改变是全方位的：</p>
+          <ul>
+            <li><strong>战场视野更广：</strong>在 24 寸或更大的显示器上，地平线上的敌人剪影、草丛中的微小移动都清晰可见，信息量远超手机小屏。</li>
+            <li><strong>压枪更精准：</strong>PUBG Mobile 的武器后坐力需要精细操控，鼠标的高精度 DPI 远比触屏拖动更容易实现稳定压枪，AKM、M762 等高后坐力枪械变得更加驾驭自如。</li>
+            <li><strong>长时间不疲劳：</strong>长局游戏时，手持手机的手臂酸痛问题消失了，键鼠操作更符合人体工学，可以连续多局保持稳定发挥。</li>
+            <li><strong>散热不降速：</strong>PUBG Mobile 是高负荷游戏，手机容易过热并触发降频保护，而电脑散热系统更强，不会出现因过热导致的帧率骤降。</li>
+            <li><strong>多任务并行：</strong>等待队友或捡装备时，可以在电脑上快速处理其他事务，无需完全退出游戏。</li>
+          </ul>
+          <p>总结来说，在电脑上玩 PUBG Mobile，是将竞技游戏的体验向 PC 端游看齐的最直接方式，无需另购主机或端游版本。</p>
+        </section>
+
+        <section aria-labelledby="advantages">
+          <h2 id="advantages">用雷电模拟器玩 PUBG Mobile 的核心优势</h2>
+          <p>雷电模拟器（LDPlayer）针对 PUBG Mobile 这类高画质射击游戏进行了深度优化，具体优势体现在以下几个方面：</p>
+          <ul>
+            <li><strong>高帧率引擎：</strong>支持 90fps 乃至更高帧率模式，配合硬件加速，画面流畅度远超手机。顺滑的帧率意味着敌人移动轨迹更连续，先手命中率更高。</li>
+            <li><strong>精准键鼠映射：</strong>内置 PUBG Mobile 预设键位，移动、开镜、射击、俯身全部可用键鼠完成，上手 10 分钟即可适应。</li>
+            <li><strong>1080P 高分辨率：</strong>可将渲染分辨率提升至 1920×1080，游戏内纹理和阴影细节更丰富，目视距离内的敌人轮廓更清晰。</li>
+            <li><strong>VT 虚拟化加速：</strong>开启 CPU 虚拟化后，模拟器的 CPU 调度效率大幅改善，在激战时更不易出现帧率波动。</li>
+            <li><strong>多实例多账号：</strong>如有多账号管理需求，雷电多开器可同时运行多个 PUBG Mobile 实例，互不干扰。</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="install">
+          <h2 id="install">如何在电脑上安装并启动 PUBG Mobile</h2>
+          <p>从下载模拟器到进入 PUBG Mobile 战场，按以下步骤操作，全程约 20 分钟（含游戏下载时间）。</p>
+          <ol class="steps">
+            <li>
+              <h3>下载并安装雷电模拟器</h3>
+              <p>访问 <a href="/ldplayer-download/">雷电模拟器下载页</a> 获取最新版 LDPlayer 9 安装包，下载后双击运行，按提示选择安装路径（推荐 SSD），等待安装完成。如需详细图文步骤，请参考 <a href="/tutorials/how-to-install-ldplayer/">雷电模拟器安装教程</a>。</p>
+            </li>
+            <li>
+              <h3>启动模拟器，登录谷歌账号</h3>
+              <p>打开雷电模拟器，等待安卓系统加载完毕后，点击内置的 Google Play 商店图标，登录你的谷歌账号（建议使用专门用于游戏的账号）。</p>
+            </li>
+            <li>
+              <h3>搜索并安装 PUBG Mobile</h3>
+              <p>在 Google Play 搜索栏输入「PUBG Mobile」，找到官方版本并安装。游戏安装包约 1.5~2GB，安装完成后会提示下载额外资源包，全部下载完毕后即可进入游戏。也可以从可信渠道下载 PUBG Mobile APK 直接拖入模拟器安装。</p>
+            </li>
+            <li>
+              <h3>配置键位，调整设置，进入对局</h3>
+              <p>首次进入 PUBG Mobile 后，打开雷电模拟器的键位编辑器，加载 PUBG Mobile 预设模板，再根据个人习惯微调。随后进入游戏设置调整画质与灵敏度，完成校准后即可正式上战场。</p>
+            </li>
+          </ol>
+          <div class="tip"><p><strong>重要提示：</strong>首次运行前，请先确认已 <a href="/tutorials/enable-vt-for-ldplayer/">开启 CPU 虚拟化（VT）</a>，这是避免 PUBG Mobile 卡顿的首要措施。</p></div>
+        </section>
+
+        <section aria-labelledby="keymapping">
+          <h2 id="keymapping">推荐键位映射方案</h2>
+          <p>PUBG Mobile 操作复杂度较高，以下键位方案兼顾了实用性与操作连贯性，适合有一定射击游戏基础的玩家，也可以作为新手的入门参考：</p>
+          <ul>
+            <li><strong>移动：</strong>W / A / S / D 控制前后左右，Shift 加速冲刺</li>
+            <li><strong>瞄准开镜：</strong>鼠标右键（点击切换进镜/退镜）</li>
+            <li><strong>开枪射击：</strong>鼠标左键</li>
+            <li><strong>切换射击模式：</strong>B 键（单射 / 连射 / 爆发）</li>
+            <li><strong>跳跃：</strong>空格键</li>
+            <li><strong>俯身/蹲下：</strong>Z 键俯卧，C 键下蹲</li>
+            <li><strong>换弹：</strong>R 键</li>
+            <li><strong>拾取/互动：</strong>F 键</li>
+            <li><strong>切换武器：</strong>1 / 2 / 3 键（主武器1、主武器2、手枪）</li>
+            <li><strong>投掷手雷：</strong>G 键（长按选择手雷类型）</li>
+            <li><strong>使用医疗/补给：</strong>Q 键（绑定医疗包），H 键（能量饮料）</li>
+            <li><strong>查看地图：</strong>M 键</li>
+            <li><strong>开车 / 下车：</strong>驾驶时 W/S 加减速，E 键上下车</li>
+          </ul>
+          <div class="note"><p><strong>灵敏度调节建议：</strong>在雷电模拟器的鼠标灵敏度设置中，将视角灵敏度调至 60~80，进入 PUBG Mobile 训练场实弹校准，根据压枪效果上下微调，找到最顺手的参数组合。</p></div>
+        </section>
+
+        <section aria-labelledby="settings">
+          <h2 id="settings">推荐画质与帧率设置</h2>
+          <p>PUBG Mobile 的画质选项比较丰富，结合电脑配置合理选择，可以在视觉体验和帧率之间取得最佳平衡：</p>
+          <div class="table-wrap">
+            <table>
+              <caption>PUBG Mobile 在雷电模拟器中的推荐设置</caption>
+              <thead>
+                <tr><th>电脑配置</th><th>游戏画质</th><th>游戏帧率</th><th>模拟器分辨率</th><th>分配内存</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>入门（4 核 / 4GB）</td><td>流畅</td><td>高（60fps）</td><td>1280×720</td><td>4GB</td></tr>
+                <tr><td>中端（4 核 / 8GB）</td><td>高清 / 均衡</td><td>极限（90fps）</td><td>1600×900</td><td>6GB</td></tr>
+                <tr><td>高端（6 核+ / 16GB）</td><td>HDR / 超高清</td><td>极限（90fps）</td><td>1920×1080</td><td>8GB</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>在雷电模拟器「设置 → 性能」中，根据上表分配对应的 CPU 核心数与内存，并启用「DirectX 11 硬件加速」（NVIDIA / AMD 独显用户）或「OpenGL」（核显用户），渲染效率会有明显提升。同时，将模拟器的「帧率上限」调至「高帧率（90fps）」或「极限」，与游戏内帧率设置保持一致。</p>
+        </section>
+
+        <section aria-labelledby="smooth">
+          <h2 id="smooth">流畅运行与防卡顿建议</h2>
+          <p>PUBG Mobile 对 CPU 和内存的需求高于 Free Fire，以下措施能有效保障全程流畅：</p>
+          <ul>
+            <li><strong>优先开启 VT 虚拟化：</strong>这是最关键的一步。参考 <a href="/tutorials/enable-vt-for-ldplayer/">开启 VT 教程</a> 进入 BIOS 启用 Intel VT-x 或 AMD SVM，开启后 CPU 调度效率大幅提升。</li>
+            <li><strong>为模拟器分配足够内存：</strong>PUBG Mobile 本身就需要 2~3GB 内存，建议为模拟器分配至少 6GB，确保系统不会因内存不足而卡顿。</li>
+            <li><strong>更新显卡驱动：</strong>旧版驱动容易导致 OpenGL 渲染异常或帧率不稳定，在 NVIDIA 或 AMD 官网下载最新驱动并安装。</li>
+            <li><strong>使用 SSD 存储：</strong>PUBG Mobile 地图加载量大，SSD 比机械硬盘的加载速度快数倍，可显著缩短进图等待时间。</li>
+            <li><strong>关闭后台高占用程序：</strong>游戏期间关闭浏览器、下载工具、视频软件等，将 CPU 和内存资源集中给模拟器。</li>
+            <li><strong>适当降画质优先帧率：</strong>在竞技对局中，60fps 流畅画面比高画质静态画质更有实战价值，优先保帧率后再考虑提升画质。</li>
+          </ul>
+          <p>如果按照上述步骤后仍有明显卡顿，请查阅 <a href="/tutorials/ldplayer-lag-fix/">雷电模拟器卡顿完整解决方案</a>，其中包含从系统排查到模拟器底层调优的详细步骤。</p>
+        </section>
+
+        <section aria-labelledby="faq">
+          <h2 id="faq">常见问题 FAQ</h2>
+          <div class="faq">
+            <div class="faq-item">
+              <h3>用雷电模拟器玩 PUBG Mobile 会被检测封号吗？</h3>
+              <p>PUBG Mobile 对模拟器玩家有专属匹配机制（模拟器与模拟器玩家优先对战），雷电模拟器本身不含任何作弊辅助功能，正常游玩不会因使用模拟器而封号。切勿使用任何第三方外挂程序。</p>
+            </div>
+            <div class="faq-item">
+              <h3>PUBG Mobile 在雷电模拟器上能开多少帧？</h3>
+              <p>雷电模拟器支持将 PUBG Mobile 帧率提升至 90fps。游戏内需将帧率设置为「极限」，模拟器中开启高帧率模式，配合 <a href="/tutorials/enable-vt-for-ldplayer/">开启 VT 虚拟化</a> 效果最佳。</p>
+            </div>
+            <div class="faq-item">
+              <h3>PUBG Mobile 模拟器版和手机版是同一个服务器吗？</h3>
+              <p>是的，账号数据互通。匹配时模拟器玩家通常会与其他模拟器玩家优先匹配，以保证对局公平性。</p>
+            </div>
+            <div class="faq-item">
+              <h3>玩 PUBG Mobile 推荐什么电脑配置？</h3>
+              <p>推荐 4 核以上 CPU、8GB 内存，独立显卡或性能较强的核显，并开启 VT 虚拟化。最低配置 4 核 + 4GB 也能运行，但需降低画质。可参考 <a href="/ldplayer-download/">下载页</a> 的系统要求说明。</p>
+            </div>
+            <div class="faq-item">
+              <h3>压枪时鼠标灵敏度怎么调？</h3>
+              <p>建议在雷电模拟器键位编辑器中将鼠标灵敏度调至 50~70，再进入 PUBG Mobile 游戏内将腰射和开镜灵敏度分别降低 20~30%，通过靶场实弹练习找到最适合自己的参数。</p>
+            </div>
+            <div class="faq-item">
+              <h3>怎么减少 PUBG Mobile 在模拟器中的卡顿？</h3>
+              <p>首要措施是 <a href="/tutorials/enable-vt-for-ldplayer/">开启 VT 虚拟化</a>，其次更新显卡驱动，将分配内存提升到 6~8GB，并关闭后台无关程序。若仍卡顿，将画质从「HDR」降至「高清」或「均衡」，更多方案见 <a href="/tutorials/ldplayer-lag-fix/">卡顿优化指南</a>。</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="sources" class="sources">
+          <h2 id="sources">参考资料与权威来源</h2>
+          <p>本文在撰写与事实核对时参考了以下官方与权威资料：</p>
+          <ul>
+            <li><a href="https://www.ldplayer.net/" target="_blank" rel="noopener">LDPlayer 官方网站</a> — 雷电模拟器官方网站，提供最新版下载及 PUBG Mobile 兼容性说明</li>
+            <li><a href="https://www.nvidia.com/en-us/geforce/drivers/" target="_blank" rel="noopener">NVIDIA GeForce 驱动下载</a> — NVIDIA 官方驱动下载页，保持驱动最新可提升 PUBG Mobile 在模拟器中的帧率稳定性</li>
+            <li><a href="https://www.virustotal.com/" target="_blank" rel="noopener">VirusTotal 在线文件安全检测</a> — 谷歌旗下权威安全检测平台，可用于验证 APK 等下载文件的安全性</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="related">
+          <h2 id="related">相关推荐</h2>
+          <div class="grid grid-3">
+            <div class="card link">
+              <span class="kicker">射击</span>
+              <h3><a class="stretched" href="/games/free-fire-on-pc/">Free Fire 电脑版</a></h3>
+              <p>快节奏大逃杀，低配也能流畅，键鼠吃鸡体验绝佳。</p>
+            </div>
+            <div class="card link">
+              <span class="kicker">射击</span>
+              <h3><a class="stretched" href="/games/cod-mobile-on-pc/">COD Mobile 电脑版</a></h3>
+              <p>使命召唤手游键鼠映射，团队竞技与大逃杀模式全覆盖。</p>
+            </div>
+            <div class="card link">
+              <span class="kicker">下载</span>
+              <h3><a class="stretched" href="/ldplayer-download/">下载雷电模拟器</a></h3>
+              <p>免费获取最新版 LDPlayer 9，开始电脑端的 PUBG Mobile 之旅。</p>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+      <aside class="sidebar" aria-label="侧边推荐">
+        <div class="widget">
+          <h2>快速入口</h2>
+          <ul>
+            <li><a href="/ldplayer-download/">下载雷电模拟器</a></li>
+            <li><a href="/tutorials/how-to-install-ldplayer/">安装教程</a></li>
+            <li><a href="/tutorials/enable-vt-for-ldplayer/">开启 VT 虚拟化</a></li>
+            <li><a href="/tutorials/ldplayer-lag-fix/">卡顿优化指南</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h2>其他游戏专题</h2>
+          <ul>
+            <li><a href="/games/free-fire-on-pc/">Free Fire 电脑版</a></li>
+            <li><a href="/games/cod-mobile-on-pc/">COD Mobile 电脑版</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h2>常见问题</h2>
+          <ul>
+            <li><a href="/faq/is-ldplayer-safe/">雷电模拟器安全吗？</a></li>
+            <li><a href="/faq/is-ldplayer-free/">雷电模拟器免费吗？</a></li>
+            <li><a href="/faq/does-ldplayer-need-vt/">需要开启 VT 吗？</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="雷电模拟器 LDPlayer 首页">
+          <img src="/assets/logo.webp" alt="雷电模拟器 LDPlayer 标志" width="34" height="34" loading="lazy" decoding="async">
+          <b>雷电模拟器<span>·LDPlayer</span></b>
+        </a>
+        <p>面向 PC 的安卓模拟器信息与下载导航站，帮助你在 Windows 电脑上下载并畅玩手机游戏与应用。</p>
+      </div>
+      <div class="footer-col">
+        <h3>下载</h3>
+        <ul>
+          <li><a href="/ldplayer-download/">雷电模拟器下载</a></li>
+          <li><a href="/ldplayer-for-pc/">电脑版下载</a></li>
+          <li><a href="/ldplayer-windows-11/">Windows 11 版</a></li>
+          <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
+          <li><a href="/ldplayer-old-version/">历史旧版本</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>教程</h3>
+        <ul>
+          <li><a href="/tutorials/how-to-install-ldplayer/">安装教程</a></li>
+          <li><a href="/tutorials/enable-vt-for-ldplayer/">开启 VT</a></li>
+          <li><a href="/tutorials/ldplayer-lag-fix/">卡顿优化</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>游戏专题</h3>
+        <ul>
+          <li><a href="/games/free-fire-on-pc/">Free Fire 电脑版</a></li>
+          <li><a href="/games/pubg-mobile-on-pc/">PUBG Mobile 电脑版</a></li>
+          <li><a href="/games/cod-mobile-on-pc/">COD Mobile 电脑版</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>对比 &amp; FAQ</h3>
+        <ul>
+          <li><a href="/compare/ldplayer-vs-bluestacks/">对比 BlueStacks</a></li>
+          <li><a href="/compare/ldplayer-vs-nox/">对比夜神 Nox</a></li>
+          <li><a href="/faq/is-ldplayer-safe/">是否安全？</a></li>
+          <li><a href="/faq/is-ldplayer-free/">是否免费？</a></li>
+          <li><a href="/faq/does-ldplayer-need-vt/">需要 VT 吗？</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>关于本站</h3>
+        <ul>
+          <li><a href="/about/">关于我们</a></li>
+          <li><a href="/editorial-policy/">编辑与审核方针</a></li>
+          <li><a href="/contact/">联系我们</a></li>
+          <li><a href="/privacy/">隐私政策</a></li>
+          <li><a href="/disclaimer/">免责声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> 雷电模拟器导航站 · 本站为第三方信息站点</span>
+      <span class="disclaimer">LDPlayer、BlueStacks、Nox、Free Fire、PUBG Mobile、Call of Duty 等为各自所有者的商标，本站与其无隶属关系。</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
