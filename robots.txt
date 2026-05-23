@@ -8,8 +8,18 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
+# Bing crawlers blocked — no Bing indexing (per request)
 User-agent: Bingbot
-Allow: /
+Disallow: /
+
+User-agent: msnbot
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+User-agent: adidxbot
+Disallow: /
 
 # AI / generative search crawlers
 User-agent: GPTBot
