@@ -12,7 +12,7 @@
 <meta name="author" content="雷电模拟器">
 <meta name="format-detection" content="telephone=no">
 <link rel="preload" as="image" href="/assets/hero/bg-desktop.webp" media="(min-width:768px)" fetchpriority="high">
-<link rel="preload" as="image" href="/assets/hero/content-mobile.webp" media="(max-width:767.9px)" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/hero/bg-mobile.webp?v=2" media="(max-width:767.9px)" fetchpriority="high">
 <meta property="og:site_name" content="雷电模拟器 LDPlayer">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:type" content="website">
@@ -31,8 +31,8 @@
 <link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/styles.css">
-<script src="/assets/app.js" defer></script>
+<link rel="stylesheet" href="/assets/styles.css?v=2">
+<script src="/assets/app.js?v=2" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer 安卓模拟器","url":"https://ldmnq.ltd/","inLanguage":"zh-CN","publisher":{"@id":"https://ldmnq.ltd/#organization"}}
 </script>
@@ -74,12 +74,12 @@
   <section class="fs-hero" aria-label="雷电模拟器 安卓模拟器">
     <picture>
       <source media="(min-width:768px)" srcset="/assets/hero/bg-desktop.webp">
-      <source media="(max-width:767.9px)" srcset="/assets/hero/bg-mobile.webp">
+      <source media="(max-width:767.9px)" srcset="/assets/hero/bg-mobile.webp?v=2">
       <img class="fs-bg" src="/assets/hero/bg-desktop.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
     </picture>
-    <video class="fs-video" loop autoplay muted playsinline webkit-playsinline preload="metadata" poster="/assets/hero/bg-desktop.webp" tabindex="-1" aria-hidden="true">
-      <source src="/assets/hero/first-screen.webm" type="video/webm">
-      <source src="/assets/hero/first-screen.mp4" type="video/mp4">
+    <video class="fs-video" loop autoplay muted playsinline webkit-playsinline preload="none" poster="/assets/hero/bg-desktop.webp" tabindex="-1" aria-hidden="true">
+      <source src="/assets/hero/first-screen.webm" type="video/webm" media="(min-width:768px)">
+      <source src="/assets/hero/first-screen.mp4" type="video/mp4" media="(min-width:768px)">
     </video>
     <div class="fs-overlay" aria-hidden="true"></div>
 
@@ -98,7 +98,7 @@
     </div>
 
     <div class="fs-mobile">
-      <img class="fs-shot" src="/assets/hero/content-mobile.webp" alt="雷电模拟器：手机与电脑一键同步、云端挂机示意图" width="375" height="220" fetchpriority="high" decoding="async">
+      <img class="fs-shot" src="/assets/hero/content-mobile.webp?v=2" alt="雷电模拟器：手机与电脑一键同步、云端挂机示意图" width="375" height="220" decoding="async">
       <div class="fs-mcopy">
         <p class="fs-mtitle">雷电模拟器随身助手</p>
         <p>手机电脑 一键同步 · 云端挂机 托管无忧</p>
@@ -122,6 +122,10 @@
         <p><strong>雷电模拟器（英文名 LDPlayer）是一款运行在 Windows 电脑上的安卓模拟器（Android Emulator）。</strong>它在电脑中虚拟出一套完整的安卓系统环境，让你无需手机即可下载、安装并运行各类安卓游戏与 App。借助电脑更强的 CPU、显卡与内存，手游可以稳定保持高帧率，并通过键盘、鼠标和手柄获得远超触屏的操作精度。</p>
         <p>与传统手游模拟相比，雷电模拟器在内核层面针对游戏场景做了大量优化：更低的内存占用、更快的启动速度、更顺滑的画面渲染，以及对主流芯片虚拟化指令（VT/SVM）的良好支持。无论是 MOBA、射击、卡牌还是放置类游戏，都能在大屏幕上获得更沉浸的体验。它既适合普通玩家「电脑玩手游」，也适合需要多账号、长时间挂机的进阶用户。</p>
         <div class="note"><p><strong>一句话总结：</strong>雷电模拟器 = 安卓系统 + 电脑硬件性能 + 键鼠操作，是在 PC 上畅玩手游最主流的方案之一。</p></div>
+        <figure class="screenshot">
+          <img src="/assets/ldplayer-download-showcase.webp" alt="雷电模拟器下载展示图" width="1000" height="677" loading="lazy" decoding="async">
+          <figcaption>雷电模拟器内置「雷电游戏中心」，可一键下载海量热门手游与应用。</figcaption>
+        </figure>
       </section>
 
       <section class="section" aria-labelledby="features">
