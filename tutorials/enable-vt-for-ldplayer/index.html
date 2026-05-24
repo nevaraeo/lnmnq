@@ -34,7 +34,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldmnq.ltd/"},{"@type":"ListItem","position":2,"name":"开启 VT 教程","item":"https://ldmnq.ltd/tutorials/enable-vt-for-ldplayer/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/tutorials/enable-vt-for-ldplayer/","downloadUrl":"https://ldmnq.ltd/ldplayer-download/","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/tutorials/enable-vt-for-ldplayer/","downloadUrl":"https://ldmnq.ltd/#download","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"为什么雷电模拟器一定要开启 VT？","acceptedAnswer":{"@type":"Answer","text":"开启 CPU 虚拟化（VT-x/SVM）后，模拟器可以直接调用 CPU 硬件加速指令，运行安卓系统的效率大幅提升，帧率更稳定、启动更快、多开不易崩溃。不开启 VT 时，模拟器依靠软件模拟，性能损耗非常大。"}},{"@type":"Question","name":"如何快速判断 VT 是否已开启？","acceptedAnswer":{"@type":"Answer","text":"按 Ctrl+Shift+Esc 打开任务管理器，点击「性能」选项卡，点击左侧「CPU」，查看右下角「虚拟化」一栏。显示「已启用」即 VT 已开启；显示「已禁用」则需进入 BIOS 手动开启。"}},{"@type":"Question","name":"进入 BIOS 需要按哪个键？","acceptedAnswer":{"@type":"Answer","text":"不同品牌电脑的 BIOS 热键各有不同：华硕/ASUS 通常是 Del 或 F2；技嘉 Gigabyte 是 Del；微星 MSI 是 Del；联想 Lenovo 是 F1 或 F2；戴尔 Dell 是 F2；惠普 HP 是 F10 或 Esc。开机时屏幕底部通常会提示具体按键。"}},{"@type":"Question","name":"BIOS 里找不到 VT 选项怎么办？","acceptedAnswer":{"@type":"Answer","text":"VT 选项可能隐藏在「Advanced」「CPU Configuration」「系统安全」等不同子菜单中，名称也可能是「Intel Virtualization Technology」「VT-x」「SVM Mode」「AMD-V」等。若 BIOS 版本较旧，建议先更新 BIOS 固件后再查找。极少数低端处理器不支持虚拟化，此类情况无法开启。"}},{"@type":"Question","name":"Windows 11 开启 VT 后模拟器还是报错怎么办？","acceptedAnswer":{"@type":"Answer","text":"Windows 11 中，Hyper-V、Windows Sandbox、内存完整性（Core Isolation）等功能会与模拟器的虚拟化产生冲突。需在「Windows 功能」中关闭 Hyper-V，并在「设备安全性 → 内核隔离」中关闭内存完整性，重启后再运行雷电模拟器。"}},{"@type":"Question","name":"开启 VT 之后还需要做什么？","acceptedAnswer":{"@type":"Answer","text":"开启 VT 并重启后，建议再次通过任务管理器确认「虚拟化」显示为「已启用」，然后启动雷电模拟器，前往模拟器设置中验证 VT 状态图标变为绿色即可正常使用。"}}]}
@@ -56,7 +56,7 @@
     </a>
     <span class="nav-spacer"></span>
     <ul class="nav-links" id="primary-nav">
-      <li><a href="/ldplayer-download/">下载</a></li>
+      <li><a href="/#download">下载</a></li>
       <li><a href="/ldplayer-for-pc/">电脑版</a></li>
       <li><a href="/ldplayer-9/">版本</a></li>
       <li><a href="/tutorials/how-to-install-ldplayer/" aria-current="page">教程</a></li>
@@ -267,7 +267,7 @@
             <div class="card link"><span class="kicker">入门</span><h3><a class="stretched" href="/tutorials/how-to-install-ldplayer/">如何安装雷电模拟器</a></h3><p>从下载到首次启动的完整图文教程。</p></div>
             <div class="card link"><span class="kicker">优化</span><h3><a class="stretched" href="/tutorials/ldplayer-lag-fix/">卡顿优化完整指南</a></h3><p>提升流畅度的全方位实用方法。</p></div>
             <div class="card link"><span class="kicker">兼容</span><h3><a class="stretched" href="/ldplayer-windows-11/">Windows 11 专版指南</a></h3><p>Win11 下兼容设置与冲突处理。</p></div>
-            <div class="card link"><span class="kicker">下载</span><h3><a class="stretched" href="/ldplayer-download/">雷电模拟器下载</a></h3><p>获取最新版安装包。</p></div>
+            <div class="card link"><span class="kicker">下载</span><h3><a class="stretched" href="/#download">雷电模拟器下载</a></h3><p>获取最新版安装包。</p></div>
             <div class="card link"><span class="kicker">FAQ</span><h3><a class="stretched" href="/faq/does-ldplayer-need-vt/">雷电模拟器需要 VT 吗？</a></h3><p>详细解答 VT 与模拟器的关系。</p></div>
             <div class="card link"><span class="kicker">对比</span><h3><a class="stretched" href="/compare/ldplayer-vs-bluestacks/">LDPlayer vs BlueStacks</a></h3><p>两款主流模拟器性能对比。</p></div>
           </div>
@@ -287,7 +287,7 @@
         <div class="widget">
           <h2>相关下载</h2>
           <ul>
-            <li><a href="/ldplayer-download/">雷电模拟器下载</a></li>
+            <li><a href="/#download">雷电模拟器下载</a></li>
             <li><a href="/ldplayer-for-pc/">电脑版详情</a></li>
             <li><a href="/ldplayer-windows-11/">Windows 11 版本</a></li>
             <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
@@ -320,7 +320,7 @@
       <div class="footer-col">
         <h3>下载</h3>
         <ul>
-          <li><a href="/ldplayer-download/">雷电模拟器下载</a></li>
+          <li><a href="/#download">雷电模拟器下载</a></li>
           <li><a href="/ldplayer-for-pc/">电脑版下载</a></li>
           <li><a href="/ldplayer-windows-11/">Windows 11 版</a></li>
           <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>

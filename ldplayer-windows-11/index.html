@@ -34,7 +34,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldmnq.ltd/"},{"@type":"ListItem","position":2,"name":"Windows 11 版","item":"https://ldmnq.ltd/ldplayer-windows-11/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/ldplayer-windows-11/","downloadUrl":"https://ldmnq.ltd/ldplayer-download/","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/ldplayer-windows-11/","downloadUrl":"https://ldmnq.ltd/#download","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"雷电模拟器支持 Windows 11 吗？","acceptedAnswer":{"@type":"Answer","text":"支持。雷电模拟器（LDPlayer）兼容 Windows 11，但由于 Windows 11 引入了 Hyper-V、基于虚拟化的安全（VBS）和内存完整性（Memory Integrity）等新特性，这些功能与模拟器的虚拟化机制存在冲突，需要按照本页步骤逐项关闭后才能获得最佳性能。"}},{"@type":"Question","name":"Windows 11 上运行雷电模拟器为什么会卡顿？","acceptedAnswer":{"@type":"Answer","text":"最常见的原因是 Windows 11 默认开启了内存完整性（Memory Integrity）或 Hyper-V，这两个功能会与模拟器的 VT 虚拟化机制冲突，导致性能下降或无法启动。按本页的「关闭内存完整性」和「禁用 Hyper-V」步骤操作后，问题通常可以解决。"}},{"@type":"Question","name":"关闭内存完整性会影响 Windows 11 安全吗？","acceptedAnswer":{"@type":"Answer","text":"内存完整性（Memory Integrity）是 Windows 11 的安全增强功能，关闭后系统对驱动级别攻击的防御能力会略有降低，但在日常使用中只要保持杀毒软件开启、不运行来路不明的程序，风险是可控的。不使用模拟器时可以重新开启该功能。"}},{"@type":"Question","name":"雷电模拟器在 Windows 11 上如何开启 VT？","acceptedAnswer":{"@type":"Answer","text":"在 Windows 11 上开启 VT 的步骤与其他 Windows 版本相同：重启电脑，进入 BIOS/UEFI 设置（通常按 F2、Del 或 F10），找到「Virtualization Technology」（Intel）或「SVM Mode」（AMD）选项并设为 Enabled，保存后重启即可。详细图文步骤见「如何为雷电模拟器开启 VT」教程。"}},{"@type":"Question","name":"Windows 11 家庭版（Home）也能运行雷电模拟器吗？","acceptedAnswer":{"@type":"Answer","text":"可以。Windows 11 家庭版同样支持雷电模拟器，兼容性设置步骤与专业版一致。家庭版没有组策略编辑器，但可以通过「Windows 安全中心 → 设备安全」来关闭内存完整性。"}},{"@type":"Question","name":"禁用 Hyper-V 后会影响 WSA（适用于 Android 的 Windows 子系统）吗？","acceptedAnswer":{"@type":"Answer","text":"会。WSA（Windows Subsystem for Android）依赖 Hyper-V 运行，禁用 Hyper-V 后 WSA 将无法使用。两者目前无法同时获得最优性能，建议根据实际需求选择：需要玩更多游戏且追求高性能选雷电模拟器；只需运行少数应用可尝试 WSA。"}}]}
@@ -53,7 +53,7 @@
     </a>
     <span class="nav-spacer"></span>
     <ul class="nav-links" id="primary-nav">
-      <li><a href="/ldplayer-download/" aria-current="page">下载</a></li>
+      <li><a href="/#download" aria-current="page">下载</a></li>
       <li><a href="/ldplayer-for-pc/">电脑版</a></li>
       <li><a href="/ldplayer-9/">版本</a></li>
       <li><a href="/tutorials/how-to-install-ldplayer/">教程</a></li>
@@ -205,7 +205,7 @@
           <ol class="steps">
             <li>
               <h3>下载最新版安装包</h3>
-              <p>访问 <a href="/ldplayer-download/">雷电模拟器下载页</a>，下载 LDPlayer 9 最新稳定版安装程序（约 570MB）。Windows 11 用户建议始终使用最新版，旧版本对 Win11 的兼容性较差。</p>
+              <p>访问 <a href="/#download">雷电模拟器下载页</a>，下载 LDPlayer 9 最新稳定版安装程序（约 570MB）。Windows 11 用户建议始终使用最新版，旧版本对 Win11 的兼容性较差。</p>
             </li>
             <li>
               <h3>完成兼容性设置（重要）</h3>
@@ -268,7 +268,7 @@
           <h2 id="related">相关推荐</h2>
           <div class="grid grid-3">
             <div class="card link">
-              <h3><a class="stretched" href="/ldplayer-download/">雷电模拟器下载</a></h3>
+              <h3><a class="stretched" href="/#download">雷电模拟器下载</a></h3>
               <p>获取 LDPlayer 最新版安装包，适用于所有支持的 Windows 版本。</p>
             </div>
             <div class="card link">
@@ -288,7 +288,7 @@
         <div class="widget">
           <h2>下载与版本</h2>
           <ul>
-            <li><a href="/ldplayer-download/">雷电模拟器下载</a></li>
+            <li><a href="/#download">雷电模拟器下载</a></li>
             <li><a href="/ldplayer-for-pc/">电脑版介绍</a></li>
             <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
             <li><a href="/ldplayer-old-version/">历史旧版本</a></li>
@@ -328,7 +328,7 @@
       <div class="footer-col">
         <h3>下载</h3>
         <ul>
-          <li><a href="/ldplayer-download/">雷电模拟器下载</a></li>
+          <li><a href="/#download">雷电模拟器下载</a></li>
           <li><a href="/ldplayer-for-pc/">电脑版下载</a></li>
           <li><a href="/ldplayer-windows-11/">Windows 11 版</a></li>
           <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>

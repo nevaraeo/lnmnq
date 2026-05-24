@@ -34,7 +34,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldmnq.ltd/"},{"@type":"ListItem","position":2,"name":"是否需要 VT","item":"https://ldmnq.ltd/faq/does-ldplayer-need-vt/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/faq/does-ldplayer-need-vt/","downloadUrl":"https://ldmnq.ltd/ldplayer-download/","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/faq/does-ldplayer-need-vt/","downloadUrl":"https://ldmnq.ltd/#download","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"雷电模拟器需要开启 VT 吗？","acceptedAnswer":{"@type":"Answer","text":"不是必须，但强烈建议开启。雷电模拟器在未开启 VT（CPU 虚拟化/SVM）的情况下可以运行，但性能会明显下降，帧率不稳，多开也更容易崩溃。开启 VT 是改善模拟器体验最有效的单项操作。"}},{"@type":"Question","name":"VT 是什么，对雷电模拟器有什么作用？","acceptedAnswer":{"@type":"Answer","text":"VT（Virtualization Technology）是 Intel CPU 的硬件虚拟化技术，AMD 平台对应称为 SVM（AMD-V）。开启后，CPU 可以直接为模拟器提供硬件级的虚拟化支持，大幅减少指令转译开销，使模拟器的运行速度、帧率稳定性与多开承载能力显著提升。"}},{"@type":"Question","name":"不开启 VT 会怎样？","acceptedAnswer":{"@type":"Answer","text":"不开启 VT 时，雷电模拟器仍可运行，但会以软件模拟方式工作，性能开销更大。常见表现包括：启动速度慢、游戏帧率低且不稳定、多开实例容易崩溃、高画质游戏卡顿明显，以及 CPU 占用率更高导致整机发热。"}},{"@type":"Question","name":"如何在 BIOS 中开启 VT？","acceptedAnswer":{"@type":"Answer","text":"重启电脑并在开机时按 Del 或 F2（视主板品牌而定）进入 BIOS 设置。在 Advanced 或 CPU Configuration 页找到 Intel Virtualization Technology（Intel 平台）或 SVM Mode（AMD 平台），将其设置为 Enabled，保存退出即可。详细图文步骤请参考开启 VT 教程页面。"}},{"@type":"Question","name":"Windows 11 上开启 VT 有什么注意事项？","acceptedAnswer":{"@type":"Answer","text":"Windows 11 默认启用 Hyper-V 和内存完整性（Core Isolation）功能，这两项会与部分模拟器的虚拟化层冲突，导致模拟器无法正常使用 VT 加速。建议在 Windows 安全中心关闭内存完整性，并在必要时通过控制面板禁用 Hyper-V 平台，重启后再运行模拟器。"}},{"@type":"Question","name":"雷电模拟器是免费的吗？","acceptedAnswer":{"@type":"Answer","text":"是的，雷电模拟器核心功能完全免费，包括多开、按键映射、宏命令等，无需付费。详见雷电模拟器是否免费页面。"}}]}
@@ -53,7 +53,7 @@
     </a>
     <span class="nav-spacer"></span>
     <ul class="nav-links" id="primary-nav">
-      <li><a href="/ldplayer-download/">下载</a></li>
+      <li><a href="/#download">下载</a></li>
       <li><a href="/ldplayer-for-pc/">电脑版</a></li>
       <li><a href="/ldplayer-9/">版本</a></li>
       <li><a href="/tutorials/how-to-install-ldplayer/">教程</a></li>
@@ -267,7 +267,7 @@
           <ul>
             <li><a href="/faq/is-ldplayer-safe/">是否安全？</a></li>
             <li><a href="/faq/is-ldplayer-free/">是否免费？</a></li>
-            <li><a href="/ldplayer-download/">下载雷电模拟器</a></li>
+            <li><a href="/#download">下载雷电模拟器</a></li>
             <li><a href="/tutorials/how-to-install-ldplayer/">安装教程</a></li>
           </ul>
         </div>
@@ -297,7 +297,7 @@
       <div class="footer-col">
         <h3>下载</h3>
         <ul>
-          <li><a href="/ldplayer-download/">雷电模拟器下载</a></li>
+          <li><a href="/#download">雷电模拟器下载</a></li>
           <li><a href="/ldplayer-for-pc/">电脑版下载</a></li>
           <li><a href="/ldplayer-windows-11/">Windows 11 版</a></li>
           <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
