@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://ldmnq.ltd/tutorials/ldplayer-lag-fix/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#2563eb">
-<meta name="author" content="雷电模拟器导航站">
+<meta name="author" content="雷电模拟器">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:site_name" content="雷电模拟器 LDPlayer">
 <meta property="og:locale" content="zh_CN">
@@ -43,7 +43,7 @@
 {"@context":"https://schema.org","@type":"HowTo","name":"雷电模拟器卡顿优化（提升流畅度的实用方法）","description":"从开启 VT 到调整 CPU/内存、渲染模式、显卡驱动等多方面系统解决 LDPlayer 卡顿问题。","step":[{"@type":"HowToStep","name":"开启 VT 虚拟化（最优先）","text":"进入 BIOS 开启 Intel VT-x 或 AMD SVM，这是提升模拟器性能效果最显著的步骤，其他优化建立在此基础上。"},{"@type":"HowToStep","name":"合理分配 CPU 核心与内存","text":"在雷电模拟器设置中，将 CPU 核心数设为物理核心数的一半，内存设为 2～4GB，不超过系统总内存的 50%。"},{"@type":"HowToStep","name":"调整分辨率与 DPI","text":"将模拟器分辨率设为 720p（1280×720），DPI 调整为 240，降低渲染负荷，配置较低的电脑效果尤为明显。"},{"@type":"HowToStep","name":"开启高帧率模式","text":"在雷电模拟器设置的「性能」页面，将帧率上限设置为与显示器刷新率匹配（60Hz 对应 60fps），并开启「高帧率」选项。"},{"@type":"HowToStep","name":"切换渲染模式","text":"在「引擎设置」中切换 OpenGL 或 DirectX 渲染模式，Nvidia 显卡推荐先试 DirectX，其余情况默认 OpenGL，选择画面更稳定的一项。"},{"@type":"HowToStep","name":"更新显卡驱动","text":"前往 Nvidia 或 AMD 官网下载最新版显卡驱动，旧驱动可能导致渲染错误、花屏或性能下降。"},{"@type":"HowToStep","name":"关闭后台占用程序","text":"运行模拟器前关闭浏览器、下载工具、录屏软件等占用 CPU 和内存较多的程序，释放更多资源给模拟器。"},{"@type":"HowToStep","name":"将模拟器安装在 SSD","text":"将雷电模拟器安装到 SSD 固态硬盘，可显著缩短启动时间与游戏资源加载速度，减少因磁盘 I/O 慢导致的卡顿。"},{"@type":"HowToStep","name":"将安装目录加入杀毒软件白名单","text":"在杀毒软件设置中将雷电模拟器安装目录添加到排除/信任列表，防止实时扫描干扰模拟器的磁盘读写。"},{"@type":"HowToStep","name":"适当降低游戏内画质","text":"进入游戏设置，将画质调为「流畅」或「均衡」模式，关闭阴影、抗锯齿等高负荷特效，以帧率稳定换取视觉品质。"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TechArticle","headline":"雷电模拟器卡顿优化（提升流畅度的实用方法）","inLanguage":"zh-CN","datePublished":"2026-05-23","dateModified":"2026-05-23","author":{"@type":"Organization","name":"雷电模拟器导航站 内容团队","url":"https://ldmnq.ltd/about/"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站","logo":{"@type":"ImageObject","url":"https://ldmnq.ltd/assets/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ldmnq.ltd/tutorials/ldplayer-lag-fix/"},"image":"https://ldmnq.ltd/assets/hero.webp"}
+{"@context":"https://schema.org","@type":"TechArticle","headline":"雷电模拟器卡顿优化（提升流畅度的实用方法）","inLanguage":"zh-CN","datePublished":"2026-05-23","dateModified":"2026-05-23","author":{"@type":"Organization","name":"雷电模拟器","url":"https://ldmnq.ltd/about/"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站","logo":{"@type":"ImageObject","url":"https://ldmnq.ltd/assets/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ldmnq.ltd/tutorials/ldplayer-lag-fix/"},"image":"https://ldmnq.ltd/assets/hero.webp"}
 </script>
 </head>
 <body>
@@ -77,7 +77,7 @@
     </nav>
     <h1>雷电模拟器卡顿优化（提升流畅度的实用方法）</h1>
     <p class="lede">雷电模拟器出现卡顿、掉帧、发热甚至闪退，通常都有具体的原因可以排查。本教程从开启 VT 虚拟化、合理分配 CPU 与内存、调整分辨率与帧率、切换渲染模式、更新显卡驱动等十个方面，系统介绍提升 LDPlayer 流畅度的方法，并附推荐配置对照表与 Windows 11 注意事项。</p>
-    <p class="byline">作者：<a href="/about/">雷电模拟器导航站 内容团队</a> · 技术审核：编辑部 · 最后更新：<time datetime="2026-05-23">2026 年 5 月 23 日</time> · <a href="/editorial-policy/">编辑与审核方针</a></p>
+    <p class="byline">作者：<a href="/about/">雷电模拟器</a> · 技术审核：编辑部 · 最后更新：<time datetime="2026-05-23">2026 年 5 月 23 日</time> · <a href="/editorial-policy/">编辑与审核方针</a></p>
 
     <div class="layout">
       <article class="article">
