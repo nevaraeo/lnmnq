@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雷电模拟器磁盘满了如何清理？释放空间与瘦身方法</title>
+<meta name="description" content="雷电模拟器频繁提示磁盘空间不足、无法安装新应用或更新失败？本文讲解清理应用缓存、卸载冗余游戏、磁盘瘦身、迁移数据目录与精简多开实例等释放空间的方法。">
+<link rel="canonical" href="https://ldmnq.ltd/news/ldplayer-disk-cleanup/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#2563eb">
+<meta name="author" content="雷电模拟器">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:site_name" content="雷电模拟器 LDPlayer">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="雷电模拟器磁盘满了如何清理？释放空间与瘦身方法">
+<meta property="og:description" content="雷电模拟器频繁提示磁盘空间不足、无法安装新应用或更新失败？本文讲解清理应用缓存、卸载冗余游戏、磁盘瘦身、迁移数据目录与精简多开实例等释放空间的方法。">
+<meta property="og:url" content="https://ldmnq.ltd/news/ldplayer-disk-cleanup/">
+<meta property="og:image" content="https://ldmnq.ltd/assets/hero.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="雷电模拟器磁盘清理释放空间方法">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="雷电模拟器磁盘满了如何清理？释放空间与瘦身方法">
+<meta name="twitter:description" content="雷电模拟器频繁提示磁盘空间不足、无法安装新应用或更新失败？本文讲解清理应用缓存、卸载冗余游戏、磁盘瘦身、迁移数据目录与精简多开实例等释放空间的方法。">
+<meta name="twitter:image" content="https://ldmnq.ltd/assets/hero.webp">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/styles.css?v=2">
+<script src="/assets/app.js?v=2" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldmnq.ltd/"},{"@type":"ListItem","position":2,"name":"资讯","item":"https://ldmnq.ltd/news/"},{"@type":"ListItem","position":3,"name":"磁盘清理","item":"https://ldmnq.ltd/news/ldplayer-disk-cleanup/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/news/ldplayer-disk-cleanup/","downloadUrl":"https://ldmnq.ltd/#download","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"雷电模拟器的虚拟磁盘文件在哪里，有多大？","acceptedAnswer":{"@type":"Answer","text":"雷电模拟器以 .vmdk 格式的虚拟磁盘文件存储安卓系统和应用数据，默认位于安装目录下的 vms 或 leidian 文件夹中（通常在 C:\\LDPlayer\\vms 或类似路径）。每个模拟器实例的虚拟磁盘文件大小从几百 MB 到数十 GB 不等，取决于安装的应用与游戏数量。多个实例会叠加占用，可用资源管理器查看确切大小。"}},{"@type":"Question","name":"清理应用缓存会不会导致游戏进度丢失？","acceptedAnswer":{"@type":"Answer","text":"正常情况下不会。应用缓存是临时数据，清除后游戏会在下次启动时重新生成，不影响存档和账号。但部分游戏会将进度临时保存在缓存区，如果不确定，建议在清理前先在游戏内将账号与官方服务器绑定同步，以防万一。卸载游戏才会彻底删除本地存档，清缓存不会。"}},{"@type":"Question","name":"磁盘瘦身（Compact）是什么操作，安全吗？","acceptedAnswer":{"@type":"Answer","text":"磁盘瘦身（Compact）是将虚拟磁盘文件中已删除但未回收的空白空间压缩掉，让 .vmdk 文件的实际大小与内部实际使用量更接近。这是一个纯整理操作，不会删除任何应用数据，安全可靠。操作前建议先备份重要数据，操作过程中不要强制关闭模拟器。"}},{"@type":"Question","name":"把模拟器数据目录迁移到其他盘，现有应用还能正常使用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。迁移数据目录后，模拟器会从新路径读取所有实例数据，原有应用、游戏存档和账号设置均完整保留，不需要重新安装。迁移前务必通过模拟器的官方「备份」或「多开管理器」功能操作，不要手动复制粘贴 vmdk 文件，以避免路径记录不一致导致读取失败。"}},{"@type":"Question","name":"多开实例占用空间很大，删除实例前需要注意什么？","acceptedAnswer":{"@type":"Answer","text":"删除多开实例会永久清除该实例内的所有应用和数据，无法恢复。如果某个实例中有重要的游戏进度，请先在游戏内绑定账号并完成云端同步，或使用雷电模拟器的「备份」功能导出存档，再删除实例。仅使用了系统默认数据、没有安装额外游戏的空实例可以直接删除。"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"雷电模拟器磁盘满了如何清理？","inLanguage":"zh-CN","datePublished":"2026-05-24","dateModified":"2026-05-24","author":{"@type":"Organization","name":"雷电模拟器","url":"https://ldmnq.ltd/about/"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站","logo":{"@type":"ImageObject","url":"https://ldmnq.ltd/assets/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ldmnq.ltd/news/ldplayer-disk-cleanup/"},"image":"https://ldmnq.ltd/assets/hero.webp"}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="/" aria-label="雷电模拟器 LDPlayer 首页">
+      <img src="/assets/logo.webp" alt="雷电模拟器 LDPlayer 标志" width="34" height="34" decoding="async">
+      <b>雷电模拟器<span>·LDPlayer</span></b>
+    </a>
+    <span class="nav-spacer"></span>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="/ldplayer-for-pc/">电脑版</a></li>
+      <li><a href="/ldplayer-9/">版本</a></li>
+      <li><a href="/tutorials/how-to-install-ldplayer/">教程</a></li>
+      <li><a href="/news/" aria-current="page">资讯</a></li>
+      <li><a href="/games/free-fire-on-pc/">游戏</a></li>
+      <li><a href="/compare/ldplayer-vs-bluestacks/">对比</a></li>
+      <li><a href="/faq/is-ldplayer-free/">FAQ</a></li>
+    </ul>
+    <button class="icon-btn nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="打开菜单">☰</button>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="面包屑">
+      <ol>
+        <li><a href="/">首页</a></li>
+        <li><a href="/news/">资讯</a></li>
+        <li>磁盘清理</li>
+      </ol>
+    </nav>
+    <h1>雷电模拟器磁盘满了如何清理？</h1>
+    <p class="lede">使用雷电模拟器（LDPlayer）一段时间后，磁盘空间往往在不知不觉中被大量占用——系统镜像、安装的游戏、累积的应用缓存，加上多开实例的叠加，很快就能将一块硬盘填满。本文从理解占用来源开始，逐步介绍清理应用缓存、卸载冗余游戏、执行磁盘瘦身、迁移数据目录、精简多开实例的完整方法，帮你有效释放空间并保持模拟器长期流畅运行。</p>
+    <p class="byline">作者：<a href="/about/">雷电模拟器</a> · 技术审核：编辑部 · 最后更新：<time datetime="2026-05-24">2026 年 5 月 24 日</time> · <a href="/editorial-policy/">编辑与审核方针</a></p>
+
+    <div class="layout">
+      <article class="article">
+
+        <section aria-labelledby="why-full">
+          <h2 id="why-full">磁盘为何被占满</h2>
+          <p>雷电模拟器的磁盘占用分为两个层次：<strong>宿主机层（Windows 层）</strong>和<strong>模拟器内部层（安卓层）</strong>。两者相互关联，但需要分别处理。</p>
+
+          <h3>宿主机层的主要占用来源</h3>
+          <ul>
+            <li><strong>虚拟磁盘文件（.vmdk）</strong>：这是最大的单项占用。雷电模拟器将整个安卓系统和应用数据存储在虚拟磁盘文件中，文件大小随安装游戏增多而持续增长，即使删除游戏后也未必自动缩小（已删除的空间在虚拟磁盘内部被标记为空闲，但文件本身不会自动压缩）。</li>
+            <li><strong>多开实例累积</strong>：每一个多开实例都有独立的虚拟磁盘文件，即使实例内什么都不安装，基础系统镜像也需要数百 MB。创建多个实例后，占用会快速叠加。</li>
+            <li><strong>下载缓存与安装包</strong>：通过模拟器下载的 APK 安装包，以及浏览器下载到宿主机的安装文件，在完成安装后往往没有及时清理，持续积累。</li>
+            <li><strong>日志与临时文件</strong>：模拟器运行产生的日志文件和临时目录，长期不清理也会积累到可观的体积。</li>
+          </ul>
+
+          <h3>模拟器内部层的主要占用来源</h3>
+          <ul>
+            <li><strong>游戏本体与更新包</strong>：大型手游的安装体积通常在 1～5 GB，频繁更新后旧版本数据并不总是被自动清理。</li>
+            <li><strong>应用缓存（Cache）</strong>：每款应用在运行过程中都会产生缓存，用于加快后续启动速度。缓存无上限积累，长期不清理可占据数 GB。</li>
+            <li><strong>应用数据（Data）</strong>：用户数据、设置、离线资源包等，属于应用必要数据，不能随意删除，否则会清空游戏进度。</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="usage-table">
+          <h2 id="usage-table">占用来源对照表</h2>
+          <div class="table-wrap">
+            <table>
+              <caption>雷电模拟器磁盘占用来源与清理优先级</caption>
+              <thead>
+                <tr>
+                  <th>占用类型</th>
+                  <th>典型大小</th>
+                  <th>可安全清理</th>
+                  <th>清理方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>游戏安装包（APK）</td>
+                  <td>100 MB～5 GB / 个</td>
+                  <td>是（安装后即可删除）</td>
+                  <td>手动删除宿主机文件</td>
+                </tr>
+                <tr>
+                  <td>应用缓存（Cache）</td>
+                  <td>数百 MB～数 GB / 应用</td>
+                  <td>是</td>
+                  <td>模拟器内「清除缓存」</td>
+                </tr>
+                <tr>
+                  <td>不再使用的游戏</td>
+                  <td>1～10 GB / 款</td>
+                  <td>是（卸载后回收）</td>
+                  <td>模拟器内卸载应用</td>
+                </tr>
+                <tr>
+                  <td>虚拟磁盘碎片空间</td>
+                  <td>数 GB～数十 GB</td>
+                  <td>是（磁盘瘦身）</td>
+                  <td>磁盘瘦身 / Compact</td>
+                </tr>
+                <tr>
+                  <td>多余多开实例</td>
+                  <td>500 MB～数 GB / 个</td>
+                  <td>是（删除整个实例）</td>
+                  <td>多开管理器删除实例</td>
+                </tr>
+                <tr>
+                  <td>游戏数据（Data）</td>
+                  <td>1～20 GB / 款</td>
+                  <td>谨慎（会清除进度）</td>
+                  <td>卸载游戏前先备份</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note"><p><strong>说明：</strong>「游戏数据（Data）」包含存档与账号信息，清除前务必先在游戏内绑定账号完成云端同步，或使用模拟器备份功能导出存档，再操作。</p></div>
+        </section>
+
+        <section aria-labelledby="cleanup-steps">
+          <h2 id="cleanup-steps">逐步清理操作指南</h2>
+          <p>以下步骤按照「操作难度低、风险小、效果大」的顺序排列，建议依次执行，每完成一步后检查磁盘剩余空间，满足需求即可停止。</p>
+          <div class="tip"><p><strong>提示：</strong>清理前可以先用 <a href="/news/ldplayer-backup-migrate/">数据备份功能</a> 导出重要游戏存档，操作更安心。</p></div>
+          <ol class="steps">
+            <li>
+              <h3>清理模拟器内应用缓存</h3>
+              <p>在模拟器内进入「设置 → 存储 → 应用管理」，逐一选择游戏和应用，点击「清除缓存」。对于长期运行的大型游戏，单个应用的缓存有时会累积到 2～3 GB。此操作不会删除游戏存档和账号数据，安全且立竿见影。清理完成后，应用下次启动会略慢（重新生成缓存），之后恢复正常。</p>
+            </li>
+            <li>
+              <h3>卸载不再使用的游戏与应用</h3>
+              <p>在模拟器内长按应用图标，选择「卸载」，或进入「设置 → 应用 → 已安装的应用」逐一管理。卸载游戏会同时删除该游戏的本体、缓存和本地存档。<strong>重要：</strong>卸载前请先进入游戏将账号与官方服务器绑定（微信、QQ 登录或游戏账号体系），确保进度已在云端保存，之后即可放心卸载。</p>
+            </li>
+            <li>
+              <h3>删除宿主机上的 APK 安装包</h3>
+              <p>在 Windows 资源管理器中，检查下载文件夹以及模拟器的共享目录（通常为 <code>C:\LDPlayer\Pictures\</code> 或类似路径），将已安装完毕的 APK、XAPK 文件直接删除。大型游戏安装包动辄 2～5 GB，安装完成后完全没有保留的必要。</p>
+            </li>
+            <li>
+              <h3>执行磁盘瘦身（Compact）</h3>
+              <p>打开雷电模拟器的多开管理器（「多开管理」界面），找到对应实例的「磁盘瘦身」或「优化」选项（不同版本界面略有差异）。此功能会压缩虚拟磁盘文件中已删除内容留下的空白区域，将 .vmdk 文件实际大小降至真实使用量附近。执行过程需要几分钟，期间请勿关闭模拟器。完成后虚拟磁盘文件可减小数 GB 甚至更多，效果非常显著。</p>
+            </li>
+            <li>
+              <h3>迁移模拟器数据目录到空间更大的磁盘</h3>
+              <p>如果安装盘（通常是 C 盘）空间持续紧张，最根本的解决方案是将模拟器数据目录迁移到容量更大的磁盘（D 盘、E 盘等）。具体操作：打开雷电模拟器的「系统设置 → 其他设置 → 迁移数据目录」，选择目标磁盘路径，模拟器会自动将所有实例数据复制过去并更新路径记录。迁移完成后，C 盘上的旧数据目录可以安全删除，释放大量空间。</p>
+              <div class="warn"><p><strong>注意：</strong>迁移过程中请不要强制关机，迁移完成并确认模拟器可正常启动后，再删除原路径的旧数据。</p></div>
+            </li>
+            <li>
+              <h3>删除多余的多开实例</h3>
+              <p>打开多开管理器，检查每个实例的实际使用情况。长期闲置、仅用于临时测试或已不再使用的实例，可以直接删除。删除实例将清除该实例全部数据，不可恢复。执行前确认实例内没有需要保留的内容。空实例（基础系统无额外应用）每个大约占 300～600 MB；安装了多个大型游戏的实例可占 10 GB 以上。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="advanced">
+          <h2 id="advanced">进阶：定期维护保持空间充裕</h2>
+          <p>清理是被动应对，更好的做法是养成定期维护的习惯，将磁盘占用控制在合理范围内：</p>
+          <ul>
+            <li><strong>每月清理一次应用缓存：</strong>针对频繁使用的大型游戏，每月进入设置清理一次缓存，防止积累过多。</li>
+            <li><strong>安装完成后立即删除 APK 文件：</strong>养成安装后即时清理安装包的习惯，不在宿主机上堆积大文件。</li>
+            <li><strong>每季度执行一次磁盘瘦身：</strong>如果频繁卸载和安装游戏，每三个月做一次磁盘 Compact，保持虚拟磁盘体积精简。</li>
+            <li><strong>控制多开实例数量：</strong>不创建闲置实例，多开任务完成后删除临时实例，避免无谓的空间占用。</li>
+            <li><strong>游戏数据定期备份并整理：</strong>在备份游戏存档的同时（参考 <a href="/news/ldplayer-backup-migrate/">数据备份迁移指南</a>），顺便检查哪些游戏可以卸载，保持模拟器内应用列表整洁。</li>
+          </ul>
+          <p>如果清理后仍感觉模拟器运行缓慢，磁盘问题可能只是原因之一，建议同时检查 <a href="/news/ldplayer-high-cpu/">CPU 占用</a> 与 <a href="/news/ldplayer-memory/">内存分配</a> 是否合理，配合卡顿优化指南 <a href="/tutorials/ldplayer-lag-fix/">综合调优</a> 效果更佳。</p>
+          <div class="tip"><p><strong>提示：</strong>将雷电模拟器安装在 SSD（固态硬盘）而非机械硬盘（HDD），不仅能加快游戏加载速度，磁盘瘦身操作的耗时也会大幅缩短。如需重新安装并选择路径，参考 <a href="/tutorials/how-to-install-ldplayer/">安装教程</a>。</p></div>
+        </section>
+
+        <section aria-labelledby="faq">
+          <h2 id="faq">常见问题 FAQ</h2>
+          <div class="faq">
+            <div class="faq-item">
+              <h3>雷电模拟器的虚拟磁盘文件在哪里，有多大？</h3>
+              <p>虚拟磁盘文件（.vmdk）默认位于雷电模拟器安装目录下的 vms 文件夹中（如 <code>C:\LDPlayer\vms\leidian0\</code>）。每个实例大小从数百 MB 到数十 GB 不等，取决于安装的游戏数量。可在 Windows 资源管理器中右键文件夹查看实际大小。</p>
+            </div>
+            <div class="faq-item">
+              <h3>清理应用缓存会不会导致游戏进度丢失？</h3>
+              <p>正常情况下不会。缓存是临时数据，清除后游戏重新生成，不影响存档和账号。但为保险起见，清理前建议先在游戏内完成账号绑定与云端同步。</p>
+            </div>
+            <div class="faq-item">
+              <h3>磁盘瘦身（Compact）是什么操作，安全吗？</h3>
+              <p>磁盘瘦身将虚拟磁盘中已删除内容留下的空白区域压缩掉，减小 .vmdk 文件体积，不删除任何应用数据，完全安全。操作前建议备份重要存档，过程中不要强制关闭模拟器。</p>
+            </div>
+            <div class="faq-item">
+              <h3>把模拟器数据目录迁移到其他盘，现有应用还能正常使用吗？</h3>
+              <p>可以。通过模拟器官方迁移功能操作，原有应用、游戏存档和账号设置均完整保留。迁移完成后确认模拟器正常启动，再删除旧路径数据。不要手动复制 vmdk 文件迁移，以避免路径记录错误。</p>
+            </div>
+            <div class="faq-item">
+              <h3>多开实例占用空间很大，删除实例前需要注意什么？</h3>
+              <p>删除实例会永久清除该实例内的所有数据，无法恢复。请先在游戏内绑定账号并完成云端同步，或使用 <a href="/news/ldplayer-backup-migrate/">备份功能</a> 导出存档，再执行删除。空白实例（无额外游戏）可直接删除。</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related">
+          <h2 id="related">相关推荐</h2>
+          <div class="grid grid-3">
+            <div class="card link"><span class="kicker">数据安全</span><h3><a class="stretched" href="/news/ldplayer-backup-migrate/">数据备份与迁移</a></h3><p>清理前先备份，换电脑或重装不丢游戏进度的完整方法。</p></div>
+            <div class="card link"><span class="kicker">安装问题</span><h3><a class="stretched" href="/news/ldplayer-apk-install-failed/">APK 安装失败排查</a></h3><p>磁盘空间不足是 APK 安装失败的常见原因之一，清理后重试。</p></div>
+            <div class="card link"><span class="kicker">性能</span><h3><a class="stretched" href="/news/ldplayer-high-cpu/">CPU 占用过高解决</a></h3><p>磁盘与 CPU 双管齐下，让模拟器全面恢复流畅。</p></div>
+            <div class="card link"><span class="kicker">性能</span><h3><a class="stretched" href="/tutorials/ldplayer-lag-fix/">卡顿优化指南</a></h3><p>磁盘清理后结合综合优化，获得最佳游戏体验。</p></div>
+            <div class="card link"><span class="kicker">入门</span><h3><a class="stretched" href="/tutorials/how-to-install-ldplayer/">安装教程</a></h3><p>重装模拟器时选择正确的安装路径，避免 C 盘爆满。</p></div>
+            <div class="card link"><span class="kicker">下载</span><h3><a class="stretched" href="/#download">雷电模拟器下载</a></h3><p>获取最新版本，持续优化磁盘管理体验。</p></div>
+          </div>
+        </section>
+
+      </article>
+
+      <aside class="sidebar" aria-label="侧边推荐">
+        <div class="widget">
+          <h2>资讯导航</h2>
+          <ul>
+            <li><a href="/news/">全部资讯</a></li>
+            <li><a href="/news/ldplayer-apk-install-failed/">安装包解析失败</a></li>
+            <li><a href="/news/ldplayer-disk-cleanup/">磁盘清理</a></li>
+            <li><a href="/news/ldplayer-high-cpu/">CPU 占用过高</a></li>
+            <li><a href="/news/ldplayer-memory/">内存不足</a></li>
+            <li><a href="/news/ldplayer-backup-migrate/">数据备份与迁移</a></li>
+            <li><a href="/news/ldplayer-black-screen/">黑屏 / 闪退</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h2>相关下载</h2>
+          <ul>
+            <li><a href="/#download">雷电模拟器下载</a></li>
+            <li><a href="/ldplayer-for-pc/">电脑版详情</a></li>
+            <li><a href="/ldplayer-windows-11/">Windows 11 版本</a></li>
+            <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
+            <li><a href="/ldplayer-old-version/">历史旧版本</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h2>常见问题</h2>
+          <ul>
+            <li><a href="/faq/is-ldplayer-safe/">雷电模拟器安全吗？</a></li>
+            <li><a href="/faq/is-ldplayer-free/">雷电模拟器免费吗？</a></li>
+            <li><a href="/faq/does-ldplayer-need-vt/">需要开启 VT 吗？</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="雷电模拟器 LDPlayer 首页">
+          <img src="/assets/logo.webp" alt="雷电模拟器 LDPlayer 标志" width="34" height="34" loading="lazy" decoding="async">
+          <b>雷电模拟器<span>·LDPlayer</span></b>
+        </a>
+        <p>面向 PC 的安卓模拟器信息与下载导航站，帮助你在 Windows 电脑上下载并畅玩手机游戏与应用。</p>
+      </div>
+      <div class="footer-col">
+        <h3>下载</h3>
+        <ul>
+          <li><a href="/#download">雷电模拟器下载</a></li>
+          <li><a href="/ldplayer-for-pc/">电脑版下载</a></li>
+          <li><a href="/ldplayer-windows-11/">Windows 11 版</a></li>
+          <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
+          <li><a href="/ldplayer-old-version/">历史旧版本</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>教程 &amp; 资讯</h3>
+        <ul>
+          <li><a href="/tutorials/how-to-install-ldplayer/">安装教程</a></li>
+          <li><a href="/tutorials/enable-vt-for-ldplayer/">开启 VT</a></li>
+          <li><a href="/tutorials/ldplayer-lag-fix/">卡顿优化</a></li>
+          <li><a href="/news/">雷电资讯</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>游戏专题</h3>
+        <ul>
+          <li><a href="/games/free-fire-on-pc/">Free Fire 电脑版</a></li>
+          <li><a href="/games/pubg-mobile-on-pc/">PUBG Mobile 电脑版</a></li>
+          <li><a href="/games/cod-mobile-on-pc/">COD Mobile 电脑版</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>对比 &amp; FAQ</h3>
+        <ul>
+          <li><a href="/compare/ldplayer-vs-bluestacks/">对比 BlueStacks</a></li>
+          <li><a href="/compare/ldplayer-vs-nox/">对比夜神 Nox</a></li>
+          <li><a href="/faq/is-ldplayer-safe/">是否安全？</a></li>
+          <li><a href="/faq/is-ldplayer-free/">是否免费？</a></li>
+          <li><a href="/faq/does-ldplayer-need-vt/">需要 VT 吗？</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>关于本站</h3>
+        <ul>
+          <li><a href="/about/">关于我们</a></li>
+          <li><a href="/editorial-policy/">编辑与审核方针</a></li>
+          <li><a href="/contact/">联系我们</a></li>
+          <li><a href="/privacy/">隐私政策</a></li>
+          <li><a href="/disclaimer/">免责声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> 雷电模拟器导航站 · 本站为第三方信息站点</span>
+      <span class="disclaimer">LDPlayer、BlueStacks、Nox、Free Fire、PUBG Mobile、Call of Duty 等为各自所有者的商标，本站与其无隶属关系。</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

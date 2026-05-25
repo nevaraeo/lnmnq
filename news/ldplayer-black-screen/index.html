@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雷电模拟器黑屏/闪退/打不开怎么办？启动异常排查</title>
+<meta name="description" content="雷电模拟器启动黑屏、闪退、卡在加载界面或根本打不开？本文从开启 VT、处理 Hyper-V/内存完整性冲突、更新显卡驱动、切换渲染模式到重装，系统排查启动异常。">
+<link rel="canonical" href="https://ldmnq.ltd/news/ldplayer-black-screen/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#2563eb">
+<meta name="author" content="雷电模拟器">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:site_name" content="雷电模拟器 LDPlayer">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="雷电模拟器黑屏/闪退/打不开怎么办？启动异常排查">
+<meta property="og:description" content="雷电模拟器启动黑屏、闪退、卡在加载界面或根本打不开？本文从开启 VT、处理 Hyper-V/内存完整性冲突、更新显卡驱动、切换渲染模式到重装，系统排查启动异常。">
+<meta property="og:url" content="https://ldmnq.ltd/news/ldplayer-black-screen/">
+<meta property="og:image" content="https://ldmnq.ltd/assets/hero.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="雷电模拟器黑屏闪退打不开排查">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="雷电模拟器黑屏/闪退/打不开怎么办？启动异常排查">
+<meta name="twitter:description" content="雷电模拟器启动黑屏、闪退、卡在加载界面或根本打不开？本文从开启 VT、处理 Hyper-V/内存完整性冲突、更新显卡驱动、切换渲染模式到重装，系统排查启动异常。">
+<meta name="twitter:image" content="https://ldmnq.ltd/assets/hero.webp">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/styles.css?v=2">
+<script src="/assets/app.js?v=2" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://ldmnq.ltd/"},{"@type":"ListItem","position":2,"name":"资讯","item":"https://ldmnq.ltd/news/"},{"@type":"ListItem","position":3,"name":"黑屏闪退","item":"https://ldmnq.ltd/news/ldplayer-black-screen/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"雷电模拟器 LDPlayer","alternateName":"LDPlayer Android Emulator","operatingSystem":"Windows 11, Windows 10, Windows 8.1, Windows 7","applicationCategory":"GameApplication","applicationSubCategory":"Android Emulator","softwareVersion":"9","fileSize":"570MB","inLanguage":"zh-CN","url":"https://ldmnq.ltd/news/ldplayer-black-screen/","downloadUrl":"https://ldmnq.ltd/#download","screenshot":"https://ldmnq.ltd/assets/hero.webp","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"雷电模拟器黑屏最常见的原因是什么？","acceptedAnswer":{"@type":"Answer","text":"最常见的原因是 CPU 虚拟化（VT）未开启，导致模拟器无法完成内核初始化，表现为启动后黑屏或卡在进度条。其次是 Windows 11 上 Hyper-V 或内存完整性与模拟器产生冲突，以及显卡驱动过旧导致渲染失败。"}},{"@type":"Question","name":"Windows 11 上雷电模拟器黑屏，和 Windows 10 处理方式有什么不同？","acceptedAnswer":{"@type":"Answer","text":"Windows 11 默认开启了 Hyper-V 平台和内核隔离（内存完整性），这两项功能会与雷电模拟器争抢虚拟化资源，导致 VT 冲突和黑屏。需要在「Windows 功能」中关闭 Hyper-V，并在「Windows 安全中心→设备安全性→内核隔离」中关闭内存完整性，重启后才能正常使用。Windows 10 通常不存在这个问题。"}},{"@type":"Question","name":"切换 OpenGL 和 DirectX 渲染模式对黑屏问题有用吗？","acceptedAnswer":{"@type":"Answer","text":"有用。部分显卡（尤其是较旧的型号或核显）与默认渲染模式不兼容，会导致启动后出现黑屏或花屏。在雷电模拟器的「系统设置→引擎」中切换渲染模式（OpenGL ↔ DirectX），重启后有时能直接解决黑屏问题。"}},{"@type":"Question","name":"雷电模拟器提示「打不开」或直接崩溃退出，是文件损坏吗？","acceptedAnswer":{"@type":"Answer","text":"可能是，也可能是杀毒软件将模拟器的核心文件误报为威胁并隔离了。先检查杀毒软件的隔离区，将被误报的文件还原，并将模拟器安装目录加入白名单。如果文件确实损坏，通过官方渠道重新下载安装包执行修复安装或全新安装即可。"}},{"@type":"Question","name":"以上方法都试过了还是黑屏，下一步怎么办？","acceptedAnswer":{"@type":"Answer","text":"如果排查清单中的所有步骤均已尝试，建议执行干净的重装：先完整卸载雷电模拟器（包括残留文件），重启电脑，再重新从官方渠道下载最新版安装包进行全新安装。重装前记得先备份实例数据，参考数据备份与迁移指南。"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"雷电模拟器黑屏 / 闪退 / 打不开怎么办？","inLanguage":"zh-CN","datePublished":"2026-05-24","dateModified":"2026-05-24","author":{"@type":"Organization","name":"雷电模拟器","url":"https://ldmnq.ltd/about/"},"publisher":{"@type":"Organization","name":"雷电模拟器导航站","logo":{"@type":"ImageObject","url":"https://ldmnq.ltd/assets/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ldmnq.ltd/news/ldplayer-black-screen/"},"image":"https://ldmnq.ltd/assets/hero.webp"}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="/" aria-label="雷电模拟器 LDPlayer 首页">
+      <img src="/assets/logo.webp" alt="雷电模拟器 LDPlayer 标志" width="34" height="34" decoding="async">
+      <b>雷电模拟器<span>·LDPlayer</span></b>
+    </a>
+    <span class="nav-spacer"></span>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="/ldplayer-for-pc/">电脑版</a></li>
+      <li><a href="/ldplayer-9/">版本</a></li>
+      <li><a href="/tutorials/how-to-install-ldplayer/">教程</a></li>
+      <li><a href="/news/" aria-current="page">资讯</a></li>
+      <li><a href="/games/free-fire-on-pc/">游戏</a></li>
+      <li><a href="/compare/ldplayer-vs-bluestacks/">对比</a></li>
+      <li><a href="/faq/is-ldplayer-free/">FAQ</a></li>
+    </ul>
+    <button class="icon-btn nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="打开菜单">☰</button>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="面包屑">
+      <ol>
+        <li><a href="/">首页</a></li>
+        <li><a href="/news/">资讯</a></li>
+        <li>黑屏闪退</li>
+      </ol>
+    </nav>
+    <h1>雷电模拟器黑屏 / 闪退 / 打不开怎么办？</h1>
+    <p class="lede">点击雷电模拟器图标后只出现黑色窗口、一闪而过随即消失、卡在 Logo 动画无法继续，或者根本无法启动——这些启动异常故障有不同的成因，也有对应的排查路径。本文按照从易到难的顺序整理了完整的排查步骤：从开启 VT 虚拟化、处理 Windows 11 上的 Hyper-V 与内存完整性冲突，到更新显卡驱动、切换渲染模式，乃至最后手段的重装，每一步都有清晰的操作说明，帮助你逐项定位并解决启动异常。</p>
+    <p class="byline">作者：<a href="/about/">雷电模拟器</a> · 技术审核：编辑部 · 最后更新：<time datetime="2026-05-24">2026 年 5 月 24 日</time> · <a href="/editorial-policy/">编辑与审核方针</a></p>
+
+    <div class="layout">
+      <article class="article">
+
+        <section aria-labelledby="symptoms">
+          <h2 id="symptoms">典型故障现象</h2>
+          <p>启动异常的表现形式多样，先对照确认自己遇到的属于哪种情况，有助于快速定位到最可能的原因：</p>
+          <ul>
+            <li><strong>启动即黑屏：</strong>双击图标后出现窗口框架，但内容区域始终是黑色，无任何加载动画，等待数分钟也无改变。最常见于 VT 未开启或与虚拟化功能冲突。</li>
+            <li><strong>卡 Logo / 卡进度条：</strong>可以看到雷电模拟器的启动动画或进度条，但在某个位置停止不动，重启后依然如此。通常与驱动兼容性或系统资源不足有关。</li>
+            <li><strong>闪退（启动后立即关闭）：</strong>窗口一闪而过或根本没有出现就消失，任务管理器中进程短暂出现后终止。可能是文件损坏、杀毒软件拦截或安装包本身有问题。</li>
+            <li><strong>打不开（双击无响应）：</strong>双击快捷方式或 exe 文件后完全没有任何反应，既没有进程也没有错误提示。通常是安装文件被破坏或操作系统权限问题。</li>
+            <li><strong>弹出错误代码：</strong>出现包含错误代码或英文报错信息的对话框。可记录错误代码，作为判断原因的重要线索。</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="troubleshoot-steps">
+          <h2 id="troubleshoot-steps">逐项排查：从最可能的原因开始</h2>
+          <p>以下步骤按照解决成功率从高到低排列。建议从第一步开始依次执行，每完成一步后尝试重新启动模拟器，确认问题是否已解决，不要跳步骤进行。</p>
+          <ol class="steps">
+            <li>
+              <h3>确认已开启 VT 虚拟化</h3>
+              <p>VT（CPU 虚拟化技术）是雷电模拟器能够正常运行的核心前提。未开启 VT 时，模拟器无法完成底层的安卓内核初始化，最常见的表现就是黑屏或卡在启动界面。判断 VT 是否开启：进入雷电模拟器后点击「帮助」或查看系统通知，如有「VT 未开启」的橙色警告，即可确认。开启方法：重启电脑时按 Del/F2/F10/F12（因主板品牌而异）进入 BIOS，Intel 平台找「Intel Virtualization Technology」设为 Enabled，AMD 平台找「SVM Mode」设为 Enabled，保存退出。详细图文步骤参见 <a href="/tutorials/enable-vt-for-ldplayer/">开启 VT 完整教程</a>。</p>
+            </li>
+            <li>
+              <h3>Windows 11：关闭 Hyper-V 与内存完整性</h3>
+              <p>Windows 11 默认启用了 Hyper-V 平台和内核隔离（内存完整性），这两项功能与雷电模拟器所使用的虚拟化技术存在冲突，即使 BIOS 中已开启 VT，模拟器也可能无法正常获取虚拟化资源，导致黑屏或报错。关闭方法：在开始菜单搜索「Windows 功能」，打开「启用或关闭 Windows 功能」对话框，取消勾选「Hyper-V」及其所有子项，点击确定；同时打开「Windows 安全中心→设备安全性→内核隔离详细信息」，将「内存完整性」的开关关闭。两项都关闭后重启电脑。更多 Windows 11 专属兼容问题参考 <a href="/ldplayer-windows-11/">Windows 11 版本使用指南</a>。</p>
+            </li>
+            <li>
+              <h3>更新显卡驱动至最新版</h3>
+              <p>显卡驱动版本过旧是导致黑屏、花屏和渲染失败的常见原因之一。旧版驱动可能缺少对模拟器渲染接口的支持，或存在已知的渲染 Bug。更新方式：Nvidia 显卡可通过 GeForce Experience 软件自动检测并安装最新驱动；AMD Radeon 显卡使用 Radeon Software 更新；Intel 核显使用 Intel 驱动与支持助手工具更新。安装驱动后必须重启电脑，再尝试启动模拟器。</p>
+            </li>
+            <li>
+              <h3>切换渲染模式（DirectX ↔ OpenGL）</h3>
+              <p>如果模拟器能够打开但出现黑屏或画面异常，可尝试切换渲染模式。进入雷电模拟器「系统设置→引擎」，在 DirectX 和 OpenGL 之间切换后重启模拟器。OpenGL 兼容性更广，适合大多数显卡和集成显卡；DirectX 在部分独立显卡上表现更好，但与少数显卡存在兼容问题。如果当前是 DirectX 出现黑屏，切换到 OpenGL 往往能立即解决。如果模拟器完全无法打开而无法进入设置，可在安装目录下找到配置文件（如 config.ini）手动修改渲染模式参数。</p>
+            </li>
+            <li>
+              <h3>降低分辨率并关闭高帧率</h3>
+              <p>过高的分辨率设置（如 2K 或 4K）可能在部分低性能显卡上导致渲染初始化超时，表现为卡在启动界面。如果模拟器能够进入设置，将分辨率降至 720p（1280×720），DPI 设为 240，帧率限制在 30fps，关闭高帧率模式，保存后重启测试。此步骤在低配和中配电脑上效果明显，高端配置电脑通常不受此影响。</p>
+            </li>
+            <li>
+              <h3>临时关闭杀毒软件</h3>
+              <p>部分杀毒软件（包括 Windows Defender）会将模拟器的核心驱动文件误判为威胁并自动隔离，导致模拟器无法正常加载内核组件而闪退或打不开。临时关闭杀毒软件的实时防护，或检查杀毒软件的「隔离区」，找到被隔离的模拟器相关文件并还原，然后将模拟器安装目录添加到排除列表（白名单），之后重新开启实时防护。这样在保持系统安全的同时，也不会影响模拟器正常运行。如果不确定模拟器是否安全，可参考 <a href="/faq/is-ldplayer-safe/">雷电模拟器安全说明</a>。</p>
+            </li>
+            <li>
+              <h3>以管理员权限运行</h3>
+              <p>雷电模拟器需要一定的系统权限来访问虚拟化驱动和网络接口。在非管理员账户或权限受限的环境下运行，可能导致启动失败。右键点击雷电模拟器的桌面快捷方式，选择「以管理员身份运行」，观察是否能正常启动。如果有效，可以在快捷方式属性的「兼容性」选项卡中勾选「以管理员身份运行此程序」，使其默认以管理员权限启动。</p>
+            </li>
+            <li>
+              <h3>执行修复安装或全新重装</h3>
+              <p>如果以上步骤均无效，说明安装文件可能已损坏或与当前系统环境存在深层冲突，此时重装是最彻底的解决方案。重装前务必先备份实例数据（参考 <a href="/news/ldplayer-backup-migrate/">数据备份与迁移指南</a>），避免重装后进度丢失。卸载时建议使用系统控制面板的「添加或删除程序」完整卸载，或使用专业卸载工具清理残留文件和注册表项，确保干净卸载后再重新安装。最新安装包可在 <a href="/#download">下载页面</a> 获取。安装完成后，再参考 <a href="/tutorials/how-to-install-ldplayer/">安装教程</a> 完成初始配置。</p>
+            </li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="win11-detail">
+          <h2 id="win11-detail">Windows 11 用户的专项说明</h2>
+          <p>Windows 11 是目前导致雷电模拟器启动异常的最高频系统环境，主要原因是微软在 Windows 11 中加强了虚拟化安全特性，这些特性在带来安全保障的同时也与安卓模拟器的工作机制产生了冲突。除了上文提到的 Hyper-V 和内存完整性，还有以下几点需要注意：</p>
+          <ul>
+            <li><strong>Windows 虚拟机平台（Virtual Machine Platform）：</strong>这项功能也可能与模拟器冲突，在「Windows 功能」中取消勾选并重启，有时能解决持续黑屏的问题。</li>
+            <li><strong>安全启动（Secure Boot）：</strong>部分 Windows 11 设备开启了 UEFI 安全启动，少数情况下会拒绝未签名的虚拟化驱动加载。可以在 BIOS 中临时关闭安全启动进行测试，确认是否为此原因后再决定是否保持关闭状态。</li>
+            <li><strong>WSA（适用于 Android 的 Windows 子系统）：</strong>如果你同时安装了 WSA，可能与雷电模拟器产生资源冲突。可以临时禁用 WSA 后测试模拟器是否能正常启动。</li>
+          </ul>
+          <p>Windows 11 下雷电模拟器的完整兼容配置指南详见 <a href="/ldplayer-windows-11/">Windows 11 专版使用指南</a>，其中涵盖了从系统设置到 BIOS 配置的完整步骤。</p>
+          <div class="note"><p><strong>说明：</strong>完成上述兼容性设置后，Windows 11 下的雷电模拟器运行稳定性与 Windows 10 基本一致，不必因为系统版本而放弃升级。</p></div>
+        </section>
+
+        <section aria-labelledby="lag-link">
+          <h2 id="lag-link">启动成功后仍然卡顿？</h2>
+          <p>如果按照以上步骤排查后，黑屏与闪退问题已解决，模拟器可以正常启动，但运行游戏时仍感觉卡顿、掉帧或延迟高，那就属于性能优化范畴而非启动故障了。造成运行卡顿的常见原因包括 CPU/内存分配不合理、显卡驱动版本偏旧、分辨率过高等，这些都有对应的调整方法。</p>
+          <p>参考 <a href="/tutorials/ldplayer-lag-fix/">卡顿优化完整指南</a>，其中包含十个系统性的优化步骤，以及按配置档次分类的推荐设置对照表，帮助你在解决启动问题之后进一步提升游戏流畅度。同时，如果你的系统内存经常触发不足警告，可参考 <a href="/news/ldplayer-memory/">内存不足如何调整</a> 进行资源分配优化。</p>
+        </section>
+
+        <section aria-labelledby="faq">
+          <h2 id="faq">常见问题 FAQ</h2>
+          <div class="faq">
+            <div class="faq-item">
+              <h3>雷电模拟器黑屏最常见的原因是什么？</h3>
+              <p>最常见是 CPU 虚拟化（VT）未开启，导致模拟器无法完成内核初始化。其次是 Windows 11 上 Hyper-V 或内存完整性与模拟器产生冲突，以及显卡驱动过旧导致渲染失败。从第一步排查步骤开始，通常能在前三步解决大多数黑屏问题。</p>
+            </div>
+            <div class="faq-item">
+              <h3>Windows 11 上雷电模拟器黑屏，和 Windows 10 处理方式有什么不同？</h3>
+              <p>Windows 11 默认开启了 Hyper-V 和内核隔离（内存完整性），需要在「Windows 功能」中关闭 Hyper-V，并在安全中心关闭内存完整性，重启后才能正常使用。Windows 10 通常不存在这个问题。详见 <a href="/ldplayer-windows-11/">Windows 11 专版使用指南</a>。</p>
+            </div>
+            <div class="faq-item">
+              <h3>切换 OpenGL 和 DirectX 渲染模式对黑屏问题有用吗？</h3>
+              <p>有用。部分显卡与默认渲染模式不兼容，会导致启动后出现黑屏或花屏。在「系统设置→引擎」中切换渲染模式（OpenGL ↔ DirectX），重启后有时能直接解决黑屏问题。建议先试 OpenGL，如无效再切换至 DirectX。</p>
+            </div>
+            <div class="faq-item">
+              <h3>雷电模拟器提示「打不开」或直接崩溃退出，是文件损坏吗？</h3>
+              <p>可能是，也可能是杀毒软件误报并隔离了核心文件。先检查杀毒软件的隔离区，还原被误报的文件并将安装目录加入白名单。如果确实损坏，重新下载安装包执行修复安装或全新安装即可，重装前记得 <a href="/news/ldplayer-backup-migrate/">备份数据</a>。</p>
+            </div>
+            <div class="faq-item">
+              <h3>以上方法都试过了还是黑屏，下一步怎么办？</h3>
+              <p>建议执行干净的重装：完整卸载（包括残留文件），重启电脑，再从 <a href="/#download">下载页面</a> 获取最新安装包进行全新安装。重装前务必先参考 <a href="/news/ldplayer-backup-migrate/">数据备份指南</a> 保存实例数据，避免进度丢失。</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="related">
+          <h2 id="related">相关推荐</h2>
+          <div class="grid grid-3">
+            <div class="card link"><span class="kicker">必读</span><h3><a class="stretched" href="/tutorials/enable-vt-for-ldplayer/">如何开启 VT 虚拟化</a></h3><p>黑屏排查第一步，详细 BIOS 设置说明。</p></div>
+            <div class="card link"><span class="kicker">兼容</span><h3><a class="stretched" href="/ldplayer-windows-11/">Windows 11 专版指南</a></h3><p>Hyper-V 冲突与内存完整性的完整处理方法。</p></div>
+            <div class="card link"><span class="kicker">优化</span><h3><a class="stretched" href="/tutorials/ldplayer-lag-fix/">卡顿优化完整指南</a></h3><p>启动问题解决后，进一步提升运行流畅度。</p></div>
+            <div class="card link"><span class="kicker">数据</span><h3><a class="stretched" href="/news/ldplayer-backup-migrate/">数据备份与迁移</a></h3><p>重装前务必备份，保住游戏进度。</p></div>
+            <div class="card link"><span class="kicker">性能</span><h3><a class="stretched" href="/news/ldplayer-memory/">内存不足如何调整</a></h3><p>启动成功后仍崩溃？合理分配内存是关键。</p></div>
+            <div class="card link"><span class="kicker">下载</span><h3><a class="stretched" href="/#download">雷电模拟器下载</a></h3><p>获取最新版安装包，执行修复安装或全新安装。</p></div>
+          </div>
+        </section>
+
+      </article>
+
+      <aside class="sidebar" aria-label="侧边推荐">
+        <div class="widget">
+          <h2>资讯导航</h2>
+          <ul>
+            <li><a href="/news/ldplayer-apk-install-failed/">安装包解析失败</a></li>
+            <li><a href="/news/ldplayer-disk-cleanup/">磁盘满了如何清理</a></li>
+            <li><a href="/news/ldplayer-high-cpu/">CPU 占用过高</a></li>
+            <li><a href="/news/ldplayer-memory/">内存不足如何调整</a></li>
+            <li><a href="/news/ldplayer-backup-migrate/">数据备份与迁移</a></li>
+            <li><a href="/news/ldplayer-black-screen/">黑屏闪退打不开</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h2>相关下载</h2>
+          <ul>
+            <li><a href="/#download">雷电模拟器下载</a></li>
+            <li><a href="/ldplayer-for-pc/">电脑版详情</a></li>
+            <li><a href="/ldplayer-windows-11/">Windows 11 版本</a></li>
+            <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
+            <li><a href="/ldplayer-old-version/">历史旧版本</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h2>常见问题</h2>
+          <ul>
+            <li><a href="/faq/is-ldplayer-safe/">雷电模拟器安全吗？</a></li>
+            <li><a href="/faq/is-ldplayer-free/">雷电模拟器免费吗？</a></li>
+            <li><a href="/faq/does-ldplayer-need-vt/">需要开启 VT 吗？</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="雷电模拟器 LDPlayer 首页">
+          <img src="/assets/logo.webp" alt="雷电模拟器 LDPlayer 标志" width="34" height="34" loading="lazy" decoding="async">
+          <b>雷电模拟器<span>·LDPlayer</span></b>
+        </a>
+        <p>面向 PC 的安卓模拟器信息与下载导航站，帮助你在 Windows 电脑上下载并畅玩手机游戏与应用。</p>
+      </div>
+      <div class="footer-col">
+        <h3>下载</h3>
+        <ul>
+          <li><a href="/#download">雷电模拟器下载</a></li>
+          <li><a href="/ldplayer-for-pc/">电脑版下载</a></li>
+          <li><a href="/ldplayer-windows-11/">Windows 11 版</a></li>
+          <li><a href="/ldplayer-9/">雷电模拟器 9</a></li>
+          <li><a href="/ldplayer-old-version/">历史旧版本</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>教程 &amp; 资讯</h3>
+        <ul>
+          <li><a href="/tutorials/how-to-install-ldplayer/">安装教程</a></li>
+          <li><a href="/tutorials/enable-vt-for-ldplayer/">开启 VT</a></li>
+          <li><a href="/tutorials/ldplayer-lag-fix/">卡顿优化</a></li>
+          <li><a href="/news/">雷电资讯</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>游戏专题</h3>
+        <ul>
+          <li><a href="/games/free-fire-on-pc/">Free Fire 电脑版</a></li>
+          <li><a href="/games/pubg-mobile-on-pc/">PUBG Mobile 电脑版</a></li>
+          <li><a href="/games/cod-mobile-on-pc/">COD Mobile 电脑版</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>对比 &amp; FAQ</h3>
+        <ul>
+          <li><a href="/compare/ldplayer-vs-bluestacks/">对比 BlueStacks</a></li>
+          <li><a href="/compare/ldplayer-vs-nox/">对比夜神 Nox</a></li>
+          <li><a href="/faq/is-ldplayer-safe/">是否安全？</a></li>
+          <li><a href="/faq/is-ldplayer-free/">是否免费？</a></li>
+          <li><a href="/faq/does-ldplayer-need-vt/">需要 VT 吗？</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>关于本站</h3>
+        <ul>
+          <li><a href="/about/">关于我们</a></li>
+          <li><a href="/editorial-policy/">编辑与审核方针</a></li>
+          <li><a href="/contact/">联系我们</a></li>
+          <li><a href="/privacy/">隐私政策</a></li>
+          <li><a href="/disclaimer/">免责声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> 雷电模拟器导航站 · 本站为第三方信息站点</span>
+      <span class="disclaimer">LDPlayer、BlueStacks、Nox、Free Fire、PUBG Mobile、Call of Duty 等为各自所有者的商标，本站与其无隶属关系。</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
